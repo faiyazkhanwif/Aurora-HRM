@@ -1,0 +1,12 @@
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Shared\bin\Debug\net6.0\AuroraHRMPWA.Shared.deps.json
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Shared\bin\Debug\net6.0\AuroraHRMPWA.Shared.dll
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Shared\bin\Debug\net6.0\AuroraHRMPWA.Shared.pdb
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Shared\obj\Debug\net6.0\AuroraHRMPWA.Shared.csproj.AssemblyReference.cache
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Shared\obj\Debug\net6.0\AuroraHRMPWA.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Shared\obj\Debug\net6.0\AuroraHRMPWA.Shared.AssemblyInfoInputs.cache
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Shared\obj\Debug\net6.0\AuroraHRMPWA.Shared.AssemblyInfo.cs
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Shared\obj\Debug\net6.0\AuroraHRMPWA.Shared.csproj.CoreCompileInputs.cache
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Shared\obj\Debug\net6.0\AuroraHRMPWA.Shared.dll
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Shared\obj\Debug\net6.0\refint\AuroraHRMPWA.Shared.dll
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Shared\obj\Debug\net6.0\AuroraHRMPWA.Shared.pdb
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Shared\obj\Debug\net6.0\ref\AuroraHRMPWA.Shared.dll

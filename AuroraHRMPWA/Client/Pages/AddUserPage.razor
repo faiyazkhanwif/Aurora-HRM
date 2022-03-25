@@ -1,0 +1,204 @@
+﻿@page "/employeehr/adduser"
+
+<PageTitle>New Hire</PageTitle>
+<div class="animate__animated animate__fadeIn">
+    <div class="row">
+        <div class="div-subtitle">
+            <h4><strong>New Hire</strong></h4>
+        </div>
+        <hr />
+    </div>
+    <EditForm Model="newUser" OnValidSubmit="HandleRegistration">
+        <DataAnnotationsValidator />
+        <div class="row">
+            <p><i>Personal</i></p>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="name"><small><b>Name</b><span class="text-danger">*</span></small></label>
+                    <InputText id="name" @bind-Value="newUser.Name" class="form-control"></InputText>
+                    <ValidationMessage For="@(() =>newUser.Name)" />
+                </div>
+                <div class="mb-3">
+                    <label for="title"><small><b>Title</b></small></label>
+                    <div class="inputContainer">
+                        <i class="fa fa-solid fa-square-caret-down icon"> </i>
+                        <InputSelect id="title" class="form-control" @bind-Value="newUser.Title">
+                            <option>Mr</option>
+                            <option>Ms</option>
+                            <option>Dato'</option>
+                            <option>Datuk</option>
+                            <option>Datin</option>
+                            <option>Encik</option>
+                        </InputSelect>
+                    </div>
+                    <ValidationMessage For="@(() =>newUser.Title)" />
+                </div>
+                <div class="mb-3">
+                    <label for="passport"><small><b>Passport</b><span class="text-danger">*</span></small></label>
+                    <InputText id="passport" @bind-Value="newUser.Passport" class="form-control"></InputText>
+                    <ValidationMessage For="@(() =>newUser.Passport)" />
+                </div>
+                <div class="mb-3">
+                    <label for="phone"><small><b>Phone</b><span class="text-danger">*</span></small></label>
+                    <InputText id="phone" @bind-Value="newUser.Phone" class="form-control"></InputText>
+                    <ValidationMessage For="@(() =>newUser.Phone)" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="nationality"><small><b>Nationality</b><span class="text-danger">*</span></small></label>
+                    <div class="inputContainer">
+                        <i class="fa fa-solid fa-square-caret-down icon"> </i>
+                        <InputSelect id="nationality" class="form-control" @bind-Value="newUser.Nationality">
+                            <option>Malaysian</option>
+                            <option>Singaporean</option>
+                            <option>Indonesian</option>
+                            <option>Chinese</option>
+                            <option>Indian</option>
+                            <option>Bangladeshi</option>
+                        </InputSelect>
+                    </div>
+                    <ValidationMessage For="@(() =>newUser.Nationality)" />
+                </div>
+                <div class="mb-3">
+                    <label for="gender"><small><b>Gender</b><span class="text-danger">*</span></small></label>
+                    <div class="inputContainer">
+                        <i class="fa fa-solid fa-square-caret-down icon"> </i>
+                        <InputSelect id="gender" class="form-control" @bind-Value="newUser.Gender">
+                            <option>Male</option>
+                            <option>Female</option>
+                        </InputSelect>
+                    </div>
+                    <ValidationMessage For="@(() =>newUser.Gender)" />
+                </div>
+                <div class="mb-3">
+                    <label for="maritalstatus"><small><b>Marital Status</b><span class="text-danger">*</span></small></label>
+                    <div class="inputContainer">
+                        <i class="fa fa-solid fa-square-caret-down icon"> </i>
+                        <InputSelect id="maritalstatus" class="form-control" @bind-Value="newUser.MaritalStatus">
+                            <option>Single</option>
+                            <option>Married</option>
+                            <option>Divorced</option>
+                            <option>Widowed</option>
+                        </InputSelect>
+                    </div>
+                    <ValidationMessage For="@(() =>newUser.MaritalStatus)" />
+                </div>
+                <div class="mb-3">
+                    <label for="dob"><small><b>Date of Birth</b><span class="text-danger">*</span></small></label>
+                    <InputDate id="dob" @bind-Value="newUser.BirthDate" class="form-control"></InputDate>
+                    <ValidationMessage For="@(() =>newUser.BirthDate)" />
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <p><i>Address</i></p>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="address"><small><b>Address</b><span class="text-danger">*</span></small></label>
+                    <InputTextArea id="address" @bind-Value="newUser.Address" class="form-control"></InputTextArea>
+                    <ValidationMessage For="@(() =>newUser.Address)" />
+                </div>
+                <div class="mb-3">
+                    <label for="postcode"><small><b>Post Code</b><span class="text-danger">*</span></small></label>
+                    <InputNumber id="postcode" @bind-Value="newUser.PostCode" class="form-control"></InputNumber>
+                    <ValidationMessage For="@(() =>newUser.PostCode)" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="state"><small><b>State</b></small><span class="text-danger">*</span></label>
+                    <div class="inputContainer">
+                        <i class="fa fa-solid fa-square-caret-down icon"> </i>
+                        <InputSelect id="state" class="form-control" @bind-Value="newUser.State">
+                            <option>Johor</option>
+                            <option>Kedah</option>
+                            <option>Kelantan</option>
+                            <option>Melacca</option>
+                            <option>Negeri Sembilan</option>
+                            <option>Pahang</option>
+                            <option>Penang</option>
+                            <option>Perak</option>
+                            <option>Perlis</option>
+                            <option>Sabah</option>
+                            <option>Sarawak</option>
+                            <option>Selangor</option>
+                            <option>Terengganu</option>
+                            <option>Labuan</option>
+                            <option>Putrajaya</option>
+                            <option>Kuala Lumpur</option>
+                        </InputSelect>
+                    </div>
+                    <ValidationMessage For="@(() =>newUser.State)" />
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <p><i>Login Info</i></p>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="email"><small><b>Email</b></small><span class="text-danger">*</span></label>
+                    <InputText id="email" @bind-Value="newUser.Email" type="email" class="form-control"></InputText>
+                    <ValidationMessage For="@(() =>newUser.Email)" />
+                </div>
+                <div class="mb-3">
+                    <label for="role"><small><b>User Role</b></small><span class="text-danger">*</span></label>
+                    <div class="inputContainer">
+                        <i class="fa fa-solid fa-square-caret-down icon"> </i>
+                        <InputSelect id="role" class="form-control" @bind-Value="newUser.Role">
+                            <option>Employee</option>
+                            <option>Manager</option>
+                            <option>HR User</option>
+                        </InputSelect>
+                    </div>
+                    <ValidationMessage For="@(() =>newUser.Role)" />
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="mb-3">
+                    <label for="password"><small><b>Password</b></small><span class="text-danger">*</span></label>
+                    <InputText id="password" @bind-Value="newUser.Password" type="password" class="form-control"></InputText>
+                    <ValidationMessage For="@(() =>newUser.Password)" />
+                </div>
+                <div class="mb-3">
+                    <label for="confirmPassword"><small><b>Confirm Password</b></small><span class="text-danger">*</span></label>
+                    <InputText id="confirmPassword" @bind-Value="newUser.ConfirmPassword" type="password" class="form-control"></InputText>
+                    <ValidationMessage For="@(() =>newUser.ConfirmPassword)" />
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </EditForm>
+    <br />
+    <br />
+</div>
+
+
+
+@code {
+    UserRegister newUser = new UserRegister();
+    public void HandleRegistration()
+    {
+        Console.WriteLine($"Address of the user: {newUser.Address}.");
+        Console.WriteLine($"BirthDate of the user: {newUser.BirthDate}.");
+        Console.WriteLine($"ConfirmPassword of the user: {newUser.ConfirmPassword}.");
+        Console.WriteLine($"Email of the user: {newUser.Email}.");
+        Console.WriteLine($"Gender of the user: {newUser.Gender}.");
+        Console.WriteLine($"MaritalStatus of the user: {newUser.MaritalStatus}.");
+        Console.WriteLine($"Name of the user: {newUser.Name}.");
+        Console.WriteLine($"Nationality of the user: {newUser.Nationality}.");
+        Console.WriteLine($"Passport of the user: {newUser.Passport}.");
+        Console.WriteLine($"Password of the user: {newUser.Password}.");
+        Console.WriteLine($"Phone of the user: {newUser.Phone}.");
+        Console.WriteLine($"PostCode of the user: {newUser.PostCode}.");
+        Console.WriteLine($"Role of the user: {newUser.Role}.");
+        Console.WriteLine($"State of the user: {newUser.State}.");
+        Console.WriteLine($"Title of the user: {newUser.Title}.");
+    }
+
+}
