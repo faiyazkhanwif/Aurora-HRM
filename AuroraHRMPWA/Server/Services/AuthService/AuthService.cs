@@ -14,9 +14,15 @@ namespace AuroraHRMPWA.Server.Services.AuthService
             throw new NotImplementedException();
         }
 
-        public Task<bool> UserExists(string email)
+        public async Task<bool> UserExists(string email)
         {
-            throw new NotImplementedException();
+            if(await _context.Users
+                .AnyAsync(user=>user.Email.ToLower()
+                .Equals(email.ToLower())))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
