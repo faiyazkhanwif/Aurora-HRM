@@ -1,5 +1,6 @@
 global using AuroraHRMPWA.Shared;
 global using Microsoft.EntityFrameworkCore;
+global using AuroraHRMPWA.Server.Services.AuthService;
 using AuroraHRMPWA.Server.Data;
 using Microsoft.AspNetCore.ResponseCompression;
 
@@ -10,6 +11,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddEndpointsApiExplorer();

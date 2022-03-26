@@ -17,6 +17,7 @@ namespace AuroraHRMPWA.Shared
         public string ConfirmPassword { get; set; } = string.Empty;
         [Required,DataType(DataType.Text)]
         public string Name { get; set; } = string.Empty;
+        [DisplayFormat(ConvertEmptyStringToNull = false)]
         public string Title { get; set; } = string.Empty;
         [Required]
         public string Nationality { get; set; } = string.Empty;
