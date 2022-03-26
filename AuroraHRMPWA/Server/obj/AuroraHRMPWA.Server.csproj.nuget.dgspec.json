@@ -145,10 +145,6 @@
               "target": "Package",
               "version": "[6.0.3, )"
             },
-            "Microsoft.Exchange.WebServices": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.3.0, )"
