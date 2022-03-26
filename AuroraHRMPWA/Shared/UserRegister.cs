@@ -35,8 +35,8 @@ namespace AuroraHRMPWA.Shared
         [Required]
         [Phone]
         public string Phone { get; set; } = string.Empty;
-        [Required,DataType(DataType.Date)]
-        public DateOnly BirthDate { get; set; }
+        [Required, DataType(DataType.Date)]
+        public DateTime BirthDate { get; set; } = DateTime.Now;
         [Required]
         public string Role { get; set; } = string.Empty;
     }

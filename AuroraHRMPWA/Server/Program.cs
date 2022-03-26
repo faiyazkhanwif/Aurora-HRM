@@ -1,3 +1,4 @@
+global using AuroraHRMPWA.Shared;
 global using Microsoft.EntityFrameworkCore;
 using AuroraHRMPWA.Server.Data;
 using Microsoft.AspNetCore.ResponseCompression;

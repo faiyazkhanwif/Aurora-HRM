@@ -185,7 +185,7 @@
     public void HandleRegistration()
     {
         Console.WriteLine($"Address of the user: {newUser.Address}.");
-        Console.WriteLine($"BirthDate of the user: {newUser.BirthDate}.");
+        Console.WriteLine($"BirthDate of the user: {newUser.BirthDate.Date.ToString("dd/MM/yy")}.");
         Console.WriteLine($"ConfirmPassword of the user: {newUser.ConfirmPassword}.");
         Console.WriteLine($"Email of the user: {newUser.Email}.");
         Console.WriteLine($"Gender of the user: {newUser.Gender}.");

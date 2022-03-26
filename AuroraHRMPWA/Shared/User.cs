@@ -21,7 +21,7 @@ namespace AuroraHRMPWA.Shared
         public int PostCode { get; set; }
         public string State { get; set; } = string.Empty;
         public string Phone { get; set; } = string.Empty;
-        public DateOnly BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
         public DateTime DateCreated { get; set; } = DateTime.Now;
