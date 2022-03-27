@@ -245,7 +245,7 @@
       "url": "icon-5123.png"
     },
     {
-      "hash": "sha256-ujK4rKgfSJ2qdY7UmnVhvvIHUyWKjzv5p90ZPBakpP4=",
+      "hash": "sha256-XQROO2JIcRXxRTFVsEN53uM\/zP8NjYWhXBXsJw6UcRQ=",
       "url": "index.html"
     },
     {
@@ -253,7 +253,7 @@
       "url": "manifest.json"
     },
     {
-      "hash": "sha256-m1nzPLALHRPEC3JzUgUQ42OEAIeKCddHIaIj2vFKMJI=",
+      "hash": "sha256-dGulimcRCxXFLARgN3MdNb9eIFsffhlcf05w5B8CwFI=",
       "url": "AuroraHRMPWA.Client.styles.css"
     },
     {
@@ -1041,19 +1041,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-hIC61FnX00pXRQmU+m38DlLPFGHK713kHZWjVUZN+bE=",
+      "hash": "sha256-ZVddiNpGQWATyoYRtG5XyIydM3NtO8ohw5iEzQvLmvc=",
       "url": "_framework\/AuroraHRMPWA.Shared.dll"
     },
     {
-      "hash": "sha256-QJ\/a17+RZwGQ8jsFryk5i+BnVJGiouHXHaWx54GNLZc=",
+      "hash": "sha256-MMDfuDXDB7199lmNpLxdxoMv\/qFblSzso7Kb\/p\/IMXI=",
       "url": "_framework\/AuroraHRMPWA.Shared.pdb"
     },
     {
-      "hash": "sha256-NlW8deP6cmYDzhe+J2dT+Py6+TBh+AJVEjjA4y4ZQ8I=",
+      "hash": "sha256-gmS0kKbnIE39RLLwi9nX29C3sJgeL+7\/jC7T9oRESys=",
       "url": "_framework\/AuroraHRMPWA.Client.dll"
     },
     {
-      "hash": "sha256-OtfGLUa4txCPLowkUE5f3kwstK1Bby8plt1Qh8uZ3No=",
+      "hash": "sha256-MzMOqfMv60MI+15NJUwkT3rETpKkQHe3ZR6STkMi5TI=",
       "url": "_framework\/AuroraHRMPWA.Client.pdb"
     },
     {
@@ -1061,9 +1061,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-BTiU8Zl7wYA0f4p9eQo4teM3E+s5dFizDN8bToICeDs=",
+      "hash": "sha256-TdLKEr7TcOpGHYuP9UhfcXTkvg8UVe15ve\/XeQf+maI=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "zFCifC8Y"
+  "version": "YVcxqTVM"
 };

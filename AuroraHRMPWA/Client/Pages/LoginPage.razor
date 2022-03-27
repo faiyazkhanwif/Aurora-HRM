@@ -1,0 +1,68 @@
+﻿@layout LoginLayout
+@page "/"
+
+<PageTitle>Aurora HRM | Login</PageTitle>
+<div id="app">
+    <div style="position:absolute; top:40vh; width:100%;">
+        <div id="customanimate">
+            <div style="text-align:center;" class="animate__animated animate__pulse animate__infinite animate__delay-2s">
+                <img src="ahrm.png" alt="Alternate Text" width="100" />
+            </div>
+        </div>
+        <br />
+        <div style="display:flex; gap:10px; justify-content:center; align-items:center; position:relative;top:-200px;">
+            <div class="animate__animated animate__fadeIn animate__delay-1s">
+                <div class="row">
+                    <div style="text-align:center;">
+                        <h3>Login</h3>
+                        <hr />
+                        <br />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <EditForm Model="user" OnValidSubmit="HandleLogin">
+                            <DataAnnotationsValidator />
+                            <div class="row">
+                                <div class="col-lg">
+                                    <div class="row card shadow-sm">
+                                        <br />
+                                        <div class="mb-3">
+                                            <label for="email"><small><b>Email</b></small></label>
+                                            <br />
+                                            <InputText id="email" @bind-Value="user.Email" type="email" class="form-control"></InputText>
+                                            <ValidationMessage For="@(() =>user.Email)" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="password"><small><b>Password</b></small></label>
+                                            <br />
+                                            <InputText id="password" @bind-Value="user.Password" type="password" class="form-control"></InputText>
+                                            <ValidationMessage For="@(() =>user.Password)" />
+                                        </div>
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+                            <div style="text-align:center;" class="row">
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                        </EditForm>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@code {
+    private UserLogin user = new UserLogin();
+
+    private async Task HandleLogin()
+    {
+        Console.WriteLine("Testing Log in");
+    }
+}

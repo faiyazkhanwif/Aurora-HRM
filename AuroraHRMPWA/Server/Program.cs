@@ -1,9 +1,7 @@
+global using AuroraHRMPWA.Server.Data;
+global using AuroraHRMPWA.Server.Services.AuthService;
 global using AuroraHRMPWA.Shared;
 global using Microsoft.EntityFrameworkCore;
-global using AuroraHRMPWA.Server.Services.AuthService;
-global using AuroraHRMPWA.Server.Data;
-using AuroraHRMPWA.Server.Data;
-using Microsoft.AspNetCore.ResponseCompression;
 
 var builder = WebApplication.CreateBuilder(args);
 
