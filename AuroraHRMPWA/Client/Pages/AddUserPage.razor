@@ -1,4 +1,5 @@
 ﻿@page "/employeehr/adduser"
+@inject IAuthServiceClient AuthService
 
 <PageTitle>New Hire</PageTitle>
 <div class="animate__animated animate__fadeIn">
@@ -10,7 +11,7 @@
     </div>
     <EditForm Model="newUser" OnValidSubmit="HandleRegistration">
         <DataAnnotationsValidator />
-        <div class="row">
+        <div class="row card shadow-sm">
             <p><i>Personal</i></p>
             <div class="col">
                 <div class="mb-3">
@@ -23,6 +24,7 @@
                     <div class="inputContainer">
                         <i class="fa fa-solid fa-square-caret-down icon"> </i>
                         <InputSelect id="title" class="form-control" @bind-Value="newUser.Title">
+                            <option></option>
                             <option>Mr</option>
                             <option>Ms</option>
                             <option>Dato'</option>
@@ -92,7 +94,7 @@
             </div>
         </div>
         <br />
-        <div class="row">
+        <div class="row card shadow-sm">
             <p><i>Address</i></p>
             <div class="col">
                 <div class="mb-3">
@@ -135,7 +137,7 @@
             </div>
         </div>
         <br />
-        <div class="row">
+        <div class="row card shadow-sm">
             <p><i>Login Info</i></p>
             <div class="col">
                 <div class="mb-3">
@@ -171,10 +173,18 @@
                 </div>
             </div>
         </div>
-
+        <br />
         <button type="submit" class="btn btn-primary">Submit</button>
     </EditForm>
     <br />
+    @if (alertMessageShow)
+    {
+        <div class="animate__animated animate__fadeIn">
+            <div class="@messageCssClass animate__animated animate__fadeOut animate__delay-5s">
+                <span>@message</span>
+            </div>
+        </div>
+    }
     <br />
 </div>
 
@@ -182,23 +192,45 @@
 
 @code {
     UserRegister newUser = new UserRegister();
-    public void HandleRegistration()
-    {
-        Console.WriteLine($"Address of the user: {newUser.Address}.");
-        Console.WriteLine($"BirthDate of the user: {newUser.BirthDate.Date.ToString("dd/MM/yy")}.");
-        Console.WriteLine($"ConfirmPassword of the user: {newUser.ConfirmPassword}.");
-        Console.WriteLine($"Email of the user: {newUser.Email}.");
-        Console.WriteLine($"Gender of the user: {newUser.Gender}.");
-        Console.WriteLine($"MaritalStatus of the user: {newUser.MaritalStatus}.");
-        Console.WriteLine($"Name of the user: {newUser.Name}.");
-        Console.WriteLine($"Nationality of the user: {newUser.Nationality}.");
-        Console.WriteLine($"Passport of the user: {newUser.Passport}.");
-        Console.WriteLine($"Password of the user: {newUser.Password}.");
-        Console.WriteLine($"Phone of the user: {newUser.Phone}.");
-        Console.WriteLine($"PostCode of the user: {newUser.PostCode}.");
-        Console.WriteLine($"Role of the user: {newUser.Role}.");
-        Console.WriteLine($"State of the user: {newUser.State}.");
-        Console.WriteLine($"Title of the user: {newUser.Title}.");
+    private bool alertMessageShow = false;
+    string message = string.Empty;
+    string messageCssClass = string.Empty;
+    async Task HandleRegistration()
+    {/*
+    Console.WriteLine($"Address of the user: {newUser.Address}.");
+    Console.WriteLine($"BirthDate of the user: {newUser.BirthDate.Date.ToString("dd/MM/yy")}.");
+    Console.WriteLine($"ConfirmPassword of the user: {newUser.ConfirmPassword}.");
+    Console.WriteLine($"Email of the user: {newUser.Email}.");
+    Console.WriteLine($"Gender of the user: {newUser.Gender}.");
+    Console.WriteLine($"MaritalStatus of the user: {newUser.MaritalStatus}.");
+    Console.WriteLine($"Name of the user: {newUser.Name}.");
+    Console.WriteLine($"Nationality of the user: {newUser.Nationality}.");
+    Console.WriteLine($"Passport of the user: {newUser.Passport}.");
+    Console.WriteLine($"Password of the user: {newUser.Password}.");
+    Console.WriteLine($"Phone of the user: {newUser.Phone}.");
+    Console.WriteLine($"PostCode of the user: {newUser.PostCode}.");
+    Console.WriteLine($"Role of the user: {newUser.Role}.");
+    Console.WriteLine($"State of the user: {newUser.State}.");
+    Console.WriteLine($"Title of the user: {newUser.Title}.");
+    */
+        var result = await AuthService.Register(newUser);
+        messageCssClass = "text-success";
+        alertMessageShow = true;
+        if (result.Success)
+        {
+            message = result.Message;
+            await InvokeAsync(() => StateHasChanged());
+            await Task.Delay(6000);
+            alertMessageShow = false;
+        }
+        else
+        {
+            messageCssClass = "text-danger";
+            message = result.Message;
+            await InvokeAsync(() => StateHasChanged());
+            await Task.Delay(6000);
+            alertMessageShow = false;
+        }
     }
 
 }

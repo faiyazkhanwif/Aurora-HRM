@@ -17,7 +17,7 @@ namespace AuroraHRMPWA.Server.Services.AuthService
                 return new ServiceResponse<int> 
                 { 
                     Success = false,
-                    Message = "User already exists"
+                    Message = "User with the same email already exists."
                 };
             }
 
@@ -31,7 +31,8 @@ namespace AuroraHRMPWA.Server.Services.AuthService
 
             return new ServiceResponse<int>
             {
-                Data = user.Id
+                Data = user.Id,
+                Message = "New user has been added successfully."
             };
         }
 

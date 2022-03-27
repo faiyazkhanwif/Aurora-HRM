@@ -1,6 +1,7 @@
 *[b-9tmp1sm1bs] {
     font-family: Century Gothic;
 }
+
 .navbar-toggler[b-9tmp1sm1bs] {
     background-color: rgba(255, 255, 255, 0.1);
 }
@@ -15,7 +16,17 @@
 }
 
 .submenu[b-9tmp1sm1bs] {
-    font-size:0.6rem;
+    font-size: 0.6rem;
+}
+
+    .submenu:hover[b-9tmp1sm1bs] {
+        transform: scale(1.1);
+        transition: all 0.3s;
+    }
+
+.menu:hover[b-9tmp1sm1bs] {
+    transform: scale(1.1);
+    transition: all 0.3s;
 }
 
 .oi[b-9tmp1sm1bs] {
@@ -47,15 +58,15 @@
         line-height: 3rem;
     }
 
-.nav-item[b-9tmp1sm1bs]  a.active {
-    background-color: rgba(255,255,255,0.25);
-    color: white;
-}
+        .nav-item[b-9tmp1sm1bs]  a.active {
+            background-color: rgba(255,255,255,0.25);
+            color: white;
+        }
 
-.nav-item[b-9tmp1sm1bs]  a:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
-}
+        .nav-item[b-9tmp1sm1bs]  a:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+        }
 
 @media (min-width: 641px) {
     .navbar-toggler[b-9tmp1sm1bs] {

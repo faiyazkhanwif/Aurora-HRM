@@ -1,6 +1,7 @@
 * {
     font-family: Century Gothic;
 }
+
 .navbar-toggler {
     background-color: rgba(255, 255, 255, 0.1);
 }
@@ -15,7 +16,17 @@
 }
 
 .submenu {
-    font-size:0.6rem;
+    font-size: 0.6rem;
+}
+
+    .submenu:hover {
+        transform: scale(1.1);
+        transition: all 0.3s;
+    }
+
+.menu:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
 }
 
 .oi {
@@ -47,15 +58,15 @@
         line-height: 3rem;
     }
 
-.nav-item ::deep a.active {
-    background-color: rgba(255,255,255,0.25);
-    color: white;
-}
+        .nav-item ::deep a.active {
+            background-color: rgba(255,255,255,0.25);
+            color: white;
+        }
 
-.nav-item ::deep a:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
-}
+        .nav-item ::deep a:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+        }
 
 @media (min-width: 641px) {
     .navbar-toggler {

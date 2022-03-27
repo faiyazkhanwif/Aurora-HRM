@@ -10,38 +10,48 @@
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <nav class="flex-column">
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi" aria-hidden="true"><i class="fa fa-desktop" aria-hidden="true"></i></span> Dashboard
-            </NavLink>
+            <div class="menu">
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                    <span class="oi" aria-hidden="true"><i class="fa fa-desktop" aria-hidden="true"></i></span> Dashboard
+                </NavLink>
+            </div>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link">
-                <span class="oi" aria-hidden="true"><i class="fa fa-user" aria-hidden="true"></i></span> Myself
-            </NavLink>
+            <div class="menu">
+                <NavLink class="nav-link">
+                    <span class="oi" aria-hidden="true"><i class="fa fa-user" aria-hidden="true"></i></span> Myself
+                </NavLink>
+            </div>
             <ul class="submenu">
                 <li><a class="nav-link" href="employeehr"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Employee</a></li>
             </ul>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link">
-                <span class="oi" aria-hidden="true"><i class="fa fa-users" aria-hidden="true"></i></span> My Subordinates
-            </NavLink>
+            <div class="menu">
+                <NavLink class="nav-link">
+                    <span class="oi" aria-hidden="true"><i class="fa fa-users" aria-hidden="true"></i></span> My Subordinates
+                </NavLink>
+            </div>
             <ul class="submenu">
                 <li><a class="nav-link" href="employeehr"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Employee</a></li>
             </ul>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link">
-                <span class="oi" aria-hidden="true"><i class="fa fa-suitcase" aria-hidden="true"></i></span> HR User
-            </NavLink>
+            <div class="menu">
+                <NavLink class="nav-link">
+                    <span class="oi" aria-hidden="true"><i class="fa fa-suitcase" aria-hidden="true"></i></span> HR User
+                </NavLink>
+            </div>
             <ul class="submenu">
                 <li><NavLink class="nav-link" href="employeehr"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Employee</NavLink></li>
             </ul>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi" aria-hidden="true"><i class="fa fa-plus" aria-hidden="true"></i></span> Counter
-            </NavLink>
+            <div class="menu">
+                <NavLink class="nav-link" href="counter">
+                    <span class="oi" aria-hidden="true"><i class="fa fa-plus" aria-hidden="true"></i></span> Counter
+                </NavLink>
+            </div>
         </div>
     </nav>
 </div>

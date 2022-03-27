@@ -11,3 +11,8 @@ p[b-b0xp573z4b] {
     left: auto;
     right: 10px;
 }
+
+.card[b-b0xp573z4b] {
+    background: rgb(255,239,226);
+    background: radial-gradient(circle, rgba(255,239,226,1) 0%, rgba(255,255,255,1) 180%);
+}

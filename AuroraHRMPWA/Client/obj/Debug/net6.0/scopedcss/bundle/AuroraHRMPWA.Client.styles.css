@@ -12,6 +12,11 @@ p[b-b0xp573z4b] {
     left: auto;
     right: 10px;
 }
+
+.card[b-b0xp573z4b] {
+    background: rgb(255,239,226);
+    background: radial-gradient(circle, rgba(255,239,226,1) 0%, rgba(255,255,255,1) 180%);
+}
 /* /Pages/HRuserEmployeePage.razor.rz.scp.css */
 #matrix[b-8g42dhj59n] {
     margin: 0 auto;
@@ -37,12 +42,14 @@ p[b-b0xp573z4b] {
 
     #b1:hover[b-8g42dhj59n], #b3:hover[b-8g42dhj59n] {
         background-color: rgba(253, 127, 44, 0.8);
+        transform: scale(1.1);
+        transition: all 0.3s;
     }
 
 
-    #b2:hover[b-8g42dhj59n] {
-        background-color: rgb(15, 138, 15);
-    }
+#b2:hover[b-8g42dhj59n] {
+    background-color: rgb(15, 138, 15);
+}
 
 
 #b4[b-8g42dhj59n] {
@@ -52,6 +59,12 @@ p[b-b0xp573z4b] {
     #b4:hover[b-8g42dhj59n] {
         background-color: rgb(189, 15, 15);
     }
+
+.container[b-8g42dhj59n] {
+    background: rgb(255,239,226);
+    background: radial-gradient(circle, rgba(255,239,226,1) 0%, rgba(255,255,255,1) 180%);
+    border-radius: 6px;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-5jn4fhg0h2] {
     position: relative;
@@ -139,6 +152,7 @@ main[b-5jn4fhg0h2] {
 *[b-9tmp1sm1bs] {
     font-family: Century Gothic;
 }
+
 .navbar-toggler[b-9tmp1sm1bs] {
     background-color: rgba(255, 255, 255, 0.1);
 }
@@ -153,7 +167,17 @@ main[b-5jn4fhg0h2] {
 }
 
 .submenu[b-9tmp1sm1bs] {
-    font-size:0.6rem;
+    font-size: 0.6rem;
+}
+
+    .submenu:hover[b-9tmp1sm1bs] {
+        transform: scale(1.1);
+        transition: all 0.3s;
+    }
+
+.menu:hover[b-9tmp1sm1bs] {
+    transform: scale(1.1);
+    transition: all 0.3s;
 }
 
 .oi[b-9tmp1sm1bs] {
@@ -185,15 +209,15 @@ main[b-5jn4fhg0h2] {
         line-height: 3rem;
     }
 
-.nav-item[b-9tmp1sm1bs]  a.active {
-    background-color: rgba(255,255,255,0.25);
-    color: white;
-}
+        .nav-item[b-9tmp1sm1bs]  a.active {
+            background-color: rgba(255,255,255,0.25);
+            color: white;
+        }
 
-.nav-item[b-9tmp1sm1bs]  a:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
-}
+        .nav-item[b-9tmp1sm1bs]  a:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+        }
 
 @media (min-width: 641px) {
     .navbar-toggler[b-9tmp1sm1bs] {
