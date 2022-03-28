@@ -55,6 +55,11 @@
                         </EditForm>
                     </div>
                 </div>
+                <div class = "text-danger">
+                    <span>
+                        @errorMessage
+                    </span>
+                </div>
             </div>
         </div>
 
@@ -63,6 +68,8 @@
 
 @code {
     private UserLogin user = new UserLogin();
+
+    private string errorMessage = string.Empty;
 
     private async Task HandleLogin()
     {

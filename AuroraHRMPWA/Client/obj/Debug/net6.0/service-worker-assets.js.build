@@ -1063,7 +1063,11 @@
     {
       "hash": "sha256-TdLKEr7TcOpGHYuP9UhfcXTkvg8UVe15ve\/XeQf+maI=",
       "url": "_framework\/blazor.boot.json"
+    },
+    {
+      "hash": "sha256-6RRoYeDP3d0xabXmcCMF66wXeJlXVPem28Trs8sQiis=",
+      "url": "_framework\/Blazored.LocalStorage.dll"
     }
   ],
-  "version": "YVcxqTVM"
+  "version": "oz\/GNpP\/"
 };

@@ -829,3 +829,7 @@ E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\obj\Debug\net6.0\ref\Auror
 E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\obj\Debug\net6.0\scopedcss\Pages\HRuserEmployeePage.razor.rz.scp.css
 E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\obj\Debug\net6.0\scopedcss\Pages\AddUserPage.razor.rz.scp.css
 E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\obj\Debug\net6.0\scopedcss\Pages\LoginPage.razor.rz.scp.css
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll.gz
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\bin\Debug\net6.0\Blazored.LocalStorage.dll
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\obj\Debug\net6.0\build-gz\mL+mkVYu.gz

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "llfKdi9rHULDO0dYB2gqVMpJyj3LQvUaXSChmb9sa6M=",
+  "Hash": "pSAAQfhX+P+O211UpdGQVlQhk+xBGtKao8h7Dv5ocPA=",
   "Source": "AuroraHRMPWA.Server",
   "BasePath": "_content/AuroraHRMPWA.Server",
   "Mode": "Default",
@@ -129,6 +129,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\faiya\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.3\\build\\net6.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "SourceId": "AuroraHRMPWA.Client",
+      "SourceType": "Project",
+      "ContentRoot": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\faiya\\.nuget\\packages\\blazored.localstorage\\4.2.0\\lib\\net6.0\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\dotnet.6.0.3.lwep53xpqq.js",
@@ -5331,6 +5348,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll"
+    },
+    {
+      "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\obj\\Debug\\net6.0\\build-gz\\mL+mkVYu.gz",
+      "SourceId": "AuroraHRMPWA.Client",
+      "SourceType": "Project",
+      "ContentRoot": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\obj\\Debug\\net6.0\\build-gz\\MLPlatzO.gz",
