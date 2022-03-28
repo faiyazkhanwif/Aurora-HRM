@@ -1053,11 +1053,11 @@
       "url": "_framework\/AuroraHRMPWA.Shared.pdb"
     },
     {
-      "hash": "sha256-WXpeRYK\/NiV\/6Aj2Pcei6ddGl\/iFabn9oJmYRBigP38=",
+      "hash": "sha256-stil6hRy0DeKuwZ74D2v0p8CVDycMTjWl+4i61hKu1A=",
       "url": "_framework\/AuroraHRMPWA.Client.dll"
     },
     {
-      "hash": "sha256-C01Ey8R+YuxDnaCFKd9FEy0vprnLsCSq5xDLSubQ9zw=",
+      "hash": "sha256-PMCDUd0HBv6WNcBkhBqLPzq1iFgLy9s+0B4hdPCo8W0=",
       "url": "_framework\/AuroraHRMPWA.Client.pdb"
     },
     {
@@ -1065,9 +1065,13 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-WX8otjY1jbBjlaxrSfM0SgiKvusqgp9a4VoANsLFHhY=",
+      "hash": "sha256-P0iLneGIna8aThayuXyAZzWMEV\/Z2VPfZQh6\/DYgPd8=",
       "url": "_framework\/blazor.boot.json"
+    },
+    {
+      "hash": "sha256-xwc7yNSuXhZz8yU40SC0gHBxTqAFNjf+2+ZvgidZB6I=",
+      "url": "_framework\/Microsoft.AspNetCore.Components.Authorization.dll"
     }
   ],
-  "version": "3Uaat7bI"
+  "version": "\/L2Ldxb+"
 };

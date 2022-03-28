@@ -10,6 +10,7 @@
       "Blazored.LocalStorage.dll": "sha256-6RRoYeDP3d0xabXmcCMF66wXeJlXVPem28Trs8sQiis=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-Ha5fdCPDxEzQSfpAqMldZhxAZGSoQpwYh8Onk\/zR2Bc=",
       "Microsoft.AspNetCore.Components.dll": "sha256-4niu36Ua\/a0Tb++kk0BPETzMKL79X97WKKAHwXyA54M=",
+      "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-xwc7yNSuXhZz8yU40SC0gHBxTqAFNjf+2+ZvgidZB6I=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-1PZMkDLrAl6RLFr\/EMxNeUbUlRv3yJgimVzqANb9PMU=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-hkBwjTfIX83yKHGloNqJk4dwTFk3VWKGdA5OtOyERqM=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-XwPAlBNXw8oEUY4SlFxHYJVJEQWyCNt9P2vWVP\/DuiU=",
@@ -198,14 +199,14 @@
       "netstandard.dll": "sha256-klcvWVyHimPfDxg6W1A076EKpCB5ySxjtc7sxJEsGgE=",
       "System.Private.CoreLib.dll": "sha256-Y8kdbfPQ0YoYLGbOgzRmoVsnuMYNlA1hvLvDWFTtzrk=",
       "AuroraHRMPWA.Shared.dll": "sha256-ZVddiNpGQWATyoYRtG5XyIydM3NtO8ohw5iEzQvLmvc=",
-      "AuroraHRMPWA.Client.dll": "sha256-stil6hRy0DeKuwZ74D2v0p8CVDycMTjWl+4i61hKu1A="
+      "AuroraHRMPWA.Client.dll": "sha256-7ZajCf7rAyrx3j4qJDKSE1UzL+xb0ADdXeoh2tiorsI="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "AuroraHRMPWA.Shared.pdb": "sha256-MMDfuDXDB7199lmNpLxdxoMv\/qFblSzso7Kb\/p\/IMXI=",
-      "AuroraHRMPWA.Client.pdb": "sha256-PMCDUd0HBv6WNcBkhBqLPzq1iFgLy9s+0B4hdPCo8W0="
+      "AuroraHRMPWA.Client.pdb": "sha256-0\/ojeWbbEEjJl669c\/BO3yb8t5FMbfk9l2AE9RbDyu0="
     },
     "runtime": {
       "dotnet.6.0.3.lwep53xpqq.js": "sha256-pRmcHKZN4T\/YbX9dj6ITT4sNtkJ9w07OLcwl4645nPg=",
