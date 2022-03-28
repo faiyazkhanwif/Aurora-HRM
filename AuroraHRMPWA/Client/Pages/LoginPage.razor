@@ -1,5 +1,8 @@
 ﻿@layout LoginLayout
 @page "/"
+@inject IAuthServiceClient AuthService
+@inject ILocalStorageService LocalStorage
+@inject NavigationManager NavigationManager
 
 <PageTitle>Aurora HRM | Login</PageTitle>
 <div id="app">
