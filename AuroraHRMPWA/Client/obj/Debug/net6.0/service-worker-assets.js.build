@@ -269,6 +269,10 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.dll"
     },
     {
+      "hash": "sha256-xwc7yNSuXhZz8yU40SC0gHBxTqAFNjf+2+ZvgidZB6I=",
+      "url": "_framework\/Microsoft.AspNetCore.Components.Authorization.dll"
+    },
+    {
       "hash": "sha256-1PZMkDLrAl6RLFr\/EMxNeUbUlRv3yJgimVzqANb9PMU=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Forms.dll"
     },
@@ -1053,11 +1057,11 @@
       "url": "_framework\/AuroraHRMPWA.Shared.pdb"
     },
     {
-      "hash": "sha256-stil6hRy0DeKuwZ74D2v0p8CVDycMTjWl+4i61hKu1A=",
+      "hash": "sha256-QCijHyia8D2yWYHS1yQnblWPs1S4jpGxQeMEc5jWKpE=",
       "url": "_framework\/AuroraHRMPWA.Client.dll"
     },
     {
-      "hash": "sha256-PMCDUd0HBv6WNcBkhBqLPzq1iFgLy9s+0B4hdPCo8W0=",
+      "hash": "sha256-VmEIWrLdFW8Ne\/JD2xLdYOZDqe1\/uqNYj0xeWdCBwMA=",
       "url": "_framework\/AuroraHRMPWA.Client.pdb"
     },
     {
@@ -1065,13 +1069,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-P0iLneGIna8aThayuXyAZzWMEV\/Z2VPfZQh6\/DYgPd8=",
+      "hash": "sha256-v2YMgmC2xSEB+DanX2PDyxSdt7ERdptq7v\/6Khr+1JE=",
       "url": "_framework\/blazor.boot.json"
-    },
-    {
-      "hash": "sha256-xwc7yNSuXhZz8yU40SC0gHBxTqAFNjf+2+ZvgidZB6I=",
-      "url": "_framework\/Microsoft.AspNetCore.Components.Authorization.dll"
     }
   ],
-  "version": "\/L2Ldxb+"
+  "version": "8Rbtjku4"
 };

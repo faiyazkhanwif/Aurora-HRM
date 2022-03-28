@@ -3,6 +3,7 @@
 @inject IAuthServiceClient AuthService
 @inject ILocalStorageService LocalStorage
 @inject NavigationManager NavigationManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
 
 <PageTitle>Aurora HRM | Login</PageTitle>
 <div id="app">
@@ -35,30 +36,26 @@
                     <div class="col">
                         <EditForm Model="user" OnValidSubmit="HandleLogin">
                             <DataAnnotationsValidator />
-                            <div class="row">
-                                <div class="col-lg">
-                                    <div class="row card shadow-sm">
-                                        <br />
-                                        <div class="mb-3">
-                                            <label for="email"><small><b>Email</b></small></label>
-                                            <br />
-                                            <InputText id="email" @bind-Value="user.Email" type="email" class="form-control"></InputText>
-                                            <ValidationMessage For="@(() =>user.Email)" />
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="password"><small><b>Password</b></small></label>
-                                            <br />
-                                            <InputText id="password" @bind-Value="user.Password" type="password" class="form-control"></InputText>
-                                            <ValidationMessage For="@(() =>user.Password)" />
-                                        </div>
-                                        <br />
-                                    </div>
+                            <div class="row card shadow-sm" style = "width: 8cm">
+                                <br />
+                                <div class="mb-3">
+                                    <label for="email"><small><b>Email</b></small></label>
+                                    <br />
+                                    <InputText id="email" @bind-Value="user.Email" type="email" class="form-control"></InputText>
+                                    <ValidationMessage For="@(() =>user.Email)" />
                                 </div>
+                                <div class="mb-3">
+                                    <label for="password"><small><b>Password</b></small></label>
+                                    <br />
+                                    <InputText id="password" @bind-Value="user.Password" type="password" class="form-control"></InputText>
+                                    <ValidationMessage For="@(() =>user.Password)" />
+                                </div>
+                                <br />
                             </div>
                             <br />
                             <br />
-                            <div style="text-align:center;" class="row">
-                                <button type="submit" class="btn btn-primary">Login</button>
+                            <div style="text-align: center;">
+                                <button type="submit" class="btn btn-primary" style="width:180px">Login</button>
                             </div>
                         </EditForm>
                     </div>
@@ -82,6 +79,7 @@
         {
             errorMessage = string.Empty;
             await LocalStorage.SetItemAsync("authToken", result.Data);
+            await AuthenticationStateProvider.GetAuthenticationStateAsync();
             NavigationManager.NavigateTo("home");
         }
         else
