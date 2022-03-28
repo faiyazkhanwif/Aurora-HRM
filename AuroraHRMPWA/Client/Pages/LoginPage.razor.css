@@ -43,5 +43,9 @@ button {
     }
 
     button:active {
+        background-color: rgba(255, 153, 51, 0.8);
+    }
+
+    button:focus {
         background-color: rgba(253, 127, 44, 0.8);
     }

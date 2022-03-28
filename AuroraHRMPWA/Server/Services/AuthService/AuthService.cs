@@ -26,7 +26,7 @@ namespace AuroraHRMPWA.Server.Services.AuthService
             if (user == null)
             {
                 response.Success = false;
-                response.Message = "No user was found with the given email.";
+                response.Message = "No user was found.";
             }
             else if (!verifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
             {
@@ -109,6 +109,8 @@ namespace AuroraHRMPWA.Server.Services.AuthService
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Name, user.Email),
+                //Storing role for future implementation of Rolebased navigation
+                new Claim(ClaimTypes.Role, user.Role)
             };
 
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8

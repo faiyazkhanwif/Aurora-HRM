@@ -43,5 +43,9 @@ button[b-6nerrivofu] {
     }
 
     button:active[b-6nerrivofu] {
+        background-color: rgba(255, 153, 51, 0.8);
+    }
+
+    button:focus[b-6nerrivofu] {
         background-color: rgba(253, 127, 44, 0.8);
     }
