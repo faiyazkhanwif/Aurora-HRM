@@ -199,14 +199,14 @@
       "netstandard.dll": "sha256-klcvWVyHimPfDxg6W1A076EKpCB5ySxjtc7sxJEsGgE=",
       "System.Private.CoreLib.dll": "sha256-Y8kdbfPQ0YoYLGbOgzRmoVsnuMYNlA1hvLvDWFTtzrk=",
       "AuroraHRMPWA.Shared.dll": "sha256-ZVddiNpGQWATyoYRtG5XyIydM3NtO8ohw5iEzQvLmvc=",
-      "AuroraHRMPWA.Client.dll": "sha256-AfZdYLKH+VWmugPvBdR0xLnhv5SX8OEGE3lSJshtvWM="
+      "AuroraHRMPWA.Client.dll": "sha256-LlQKouw5awSPChNdzBe+cqu3h7dfYJmGKgyjCosBt2g="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "AuroraHRMPWA.Shared.pdb": "sha256-MMDfuDXDB7199lmNpLxdxoMv\/qFblSzso7Kb\/p\/IMXI=",
-      "AuroraHRMPWA.Client.pdb": "sha256-IiMW8dw1GM8GsqqodUFlmY8M45jXgXUPYBoTERZ6cO8="
+      "AuroraHRMPWA.Client.pdb": "sha256-rf0dNXziew\/ZBnlM19l4C9KiMwjg\/7o9LR3StzfJjWQ="
     },
     "runtime": {
       "dotnet.6.0.3.lwep53xpqq.js": "sha256-pRmcHKZN4T\/YbX9dj6ITT4sNtkJ9w07OLcwl4645nPg=",

@@ -1,0 +1,34 @@
+﻿@page "/profile"
+@attribute [Authorize]
+
+<h5><strong>My Profile</strong></h5>
+<hr />
+
+<div class="row animate__animated animate__fadeIn">
+    <div class="col-8">
+        <AuthorizeView>
+            <Authorized>
+                <p>Account: <span class="text-primary h6"><b>@context.User.Identity.Name</b></span></p>
+            </Authorized>
+        </AuthorizeView>
+    </div>
+    <div class="col">
+        <div style="text-align: right;">
+            <AuthorizeView Roles="HR User">
+                <Authorized><small><i class="fa fa-suitcase" aria-hidden="true"></i> HR User</small></Authorized>
+            </AuthorizeView>
+            <AuthorizeView Roles="Employee">
+                <Authorized><small><i class="fa fa-user" aria-hidden="true"></i> Employee</small></Authorized>
+            </AuthorizeView>
+            <AuthorizeView Roles="Manager">
+                <Authorized><small><i class="fa fa-users" aria-hidden="true"></i> Manager</small></Authorized>
+            </AuthorizeView>
+        </div>
+    </div>
+</div>
+
+
+
+@code {
+
+}

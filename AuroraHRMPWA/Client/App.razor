@@ -1,7 +1,38 @@
 ﻿<CascadingAuthenticationState>
     <Router AppAssembly="@typeof(App).Assembly">
         <Found Context="routeData">
-            <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+            <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+                <NotAuthorized>
+                    <div style="text-align:center;">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col">
+                                <div class="col animate__animated animate__rotateIn">
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <div class="animate__animated animate__pulse animate__infinite animate__delay-1s">
+                                        <img src="ahrm.png" alt="Alternate Text" width="150" />
+                                    </div>
+                                    <br />
+                                    <div class="animate__animated animate__fadeIn animate__delay-1s">
+                                        <h5 class="text-danger">You are not authorized to view this page.</h5>
+                                    </div>
+                                    <div class="animate__animated animate__fadeIn animate__delay-2s">
+                                        <p><a href="login" class="text-primary">Click here</a> to log in.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                </NotAuthorized>
+            </AuthorizeRouteView>
             <FocusOnNavigate RouteData="@routeData" Selector="h1" />
         </Found>
         <NotFound>

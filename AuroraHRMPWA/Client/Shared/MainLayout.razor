@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@attribute [Authorize]
 <AuthorizeView>
     <Authorized>
         <div class="page">
@@ -34,6 +35,10 @@
                         <br />
                         <div class="animate__animated animate__fadeIn animate__delay-1s">
                             <h5 class="text-danger">You are not authorized to view this page.</h5>
+                            
+                        </div>
+                        <div class = "animate__animated animate__fadeIn animate__delay-2s">
+                            <p><a href = "" class = "text-primary">Click here</a> to log in.</p>
                         </div>
                     </div>
                 </div>
