@@ -1,51 +1,83 @@
 ﻿@page "/employeehr"
 
 <PageTitle>Employee Module</PageTitle>
-<h5><strong>Employee Module - HR User</strong></h5>
-<hr />
 
-<div class="container shadow animate__animated animate__flipInX animate__delay-0.5s">
-    <div class="row" id="matrix">
-        <div class="col">
-            <button id="b1">
-                <div>
-                    <i class="fa fa-users" aria-hidden="true"></i>
+<AuthorizeView Roles="HR User">
+    <Authorized>
+        <h5><strong>Employee Module - HR User</strong></h5>
+        <hr />
+
+        <div class="container shadow animate__animated animate__flipInX animate__delay-0.5s">
+            <div class="row" id="matrix">
+                <div class="col">
+                    <button id="b1">
+                        <div>
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                        </div>
+                        <div class="small">Employee Master</div>
+                    </button>
                 </div>
-                <div class="small">Employee Master</div>
-            </button>
+                <div class="col">
+                    <a href="employeehr/adduser">
+                        <button id="b1">
+                            <div>
+                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                            </div>
+                            <div class="small">New Hire</div>
+                        </button>
+                    </a>
+                </div>
+                <div class="col">
+                    <button id="b1">-</button>
+                </div>
+                <div class="col">
+                    <button id="b1">-</button>
+                </div>
+                <div class="col">
+                    <button id="b1">-</button>
+                </div>
+                <div class="col">
+                    <button id="b1">-</button>
+                </div>
+                <div class="col">
+                    <button id="b1">-</button>
+                </div>
+                <div class="col">
+                    <button id="b1">-</button>
+                </div>
+            </div>
+            <div class="row">
+            </div>
         </div>
-        <div class="col">
-            <a href = "employeehr/adduser">
-                <button id="b1">
-                    <div>
-                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+    </Authorized>
+    <NotAuthorized>
+        <div style="text-align:center;">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <div class="col animate__animated animate__rotateIn">
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <div class="animate__animated animate__pulse animate__infinite animate__delay-1s">
+                            <img src="ahrm.png" alt="Alternate Text" width="150" />
+                        </div>
+                        <br />
+                        <div class="animate__animated animate__fadeIn animate__delay-1s">
+                            <h5 class="text-danger">You are not authorized to view this page.</h5>
+                        </div>
                     </div>
-                    <div class="small">New Hire</div>
-                </button>
-            </a>
+                </div>
+                <div class="col"></div>
+            </div>
         </div>
-        <div class="col">
-            <button id="b1">-</button>
-        </div>
-        <div class="col">
-            <button id="b1">-</button>
-        </div>
-        <div class="col">
-            <button id="b1">-</button>
-        </div>
-        <div class="col">
-            <button id="b1">-</button>
-        </div>
-        <div class="col">
-            <button id="b1">-</button>
-        </div>
-        <div class="col">
-            <button id="b1">-</button>
-        </div>
-    </div>
-    <div class="row">
-    </div>
-</div>
+    </NotAuthorized>
+</AuthorizeView>
 
 
 @code {
