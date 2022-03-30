@@ -2,7 +2,7 @@
 @inject IAuthServiceClient AuthService
 
 <PageTitle>New Hire</PageTitle>
-<AuthorizeView Roles="HR User" Context="CustomAuthContext">
+<AuthorizeView Roles="HR User, HR Manager" Context="CustomAuthContext">
     <Authorized>
         <div class="animate__animated animate__fadeIn">
             <div class="row">
@@ -155,6 +155,7 @@
                                     <option>Employee</option>
                                     <option>Manager</option>
                                     <option>HR User</option>
+                                    <option>HR Manager</option>
                                 </InputSelect>
                             </div>
                             <ValidationMessage For="@(() =>newUser.Role)" />

@@ -18,6 +18,7 @@
                 <NavLink class="nav-link" href="home" Match="NavLinkMatch.All">
                     <span class="oi" aria-hidden="true"><i class="fa fa-desktop" aria-hidden="true"></i></span> Dashboard
                 </NavLink>
+                <br />
             </div>
         </div>
         <div class="nav-item px-3">
@@ -27,23 +28,21 @@
                 </NavLink>
             </div>
             <ul class="submenu">
-                <li><a class="nav-link" href="profile"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;&nbsp;My Profile</a></li>
+                <li><NavLink class="nav-link" href="profile"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;&nbsp;My Profile</NavLink></li>
             </ul>
         </div>
-        <AuthorizeView Roles="HR User, Manager">
+        <AuthorizeView Roles="HR Manager, Manager">
             <div class="nav-item px-3">
                 <div class="menu">
                     <NavLink class="nav-link">
                         <span class="oi" aria-hidden="true"><i class="fa fa-users" aria-hidden="true"></i></span> My Subordinates
                     </NavLink>
+                    <br />
                 </div>
-                <ul class="submenu">
-                    <li><a class="nav-link"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Employee</a></li>
-                </ul>
             </div>
         </AuthorizeView>
 
-        <AuthorizeView Roles="HR User">
+        <AuthorizeView Roles="HR User, HR Manager">
             <div class="nav-item px-3">
                 <div class="menu">
                     <NavLink class="nav-link">
@@ -61,6 +60,7 @@
                 <NavLink class="nav-link" href="counter">
                     <span class="oi" aria-hidden="true"><i class="fa fa-plus" aria-hidden="true"></i></span> Counter
                 </NavLink>
+                <br />
             </div>
         </div>
         <div class="nav-item px-3">
