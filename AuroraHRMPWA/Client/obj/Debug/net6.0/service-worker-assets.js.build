@@ -249,7 +249,7 @@
       "url": "index.html"
     },
     {
-      "hash": "sha256-Yfxs5LeMczNDvC4SRLx3zb+MOP0O9dy8k07eVnf8LBQ=",
+      "hash": "sha256-SXd\/cpbT8Q0NUhkxQM8rxT+LlJFvvHJbwJX2h7sJzQA=",
       "url": "js\/cameraLoader.js"
     },
     {
@@ -1057,6 +1057,10 @@
       "url": "_framework\/AuroraHRMPWA.Shared.dll"
     },
     {
+      "hash": "sha256-BL5qN3NP7pyBhRKHXfGXEpvOag18BMLat1wtr4lrpxA=",
+      "url": "_framework\/AuroraHRMPWA.Shared.pdb"
+    },
+    {
       "hash": "sha256-K\/+DSx7bpvy9AuhZQBkozrRGmVZktYlOApUNJ7vY9iA=",
       "url": "_framework\/AuroraHRMPWA.Client.dll"
     },
@@ -1073,5 +1077,5 @@
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "1fkXJ0Je"
+  "version": "eJFzi7iG"
 };
