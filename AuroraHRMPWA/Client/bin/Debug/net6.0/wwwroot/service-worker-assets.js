@@ -5,7 +5,7 @@
       "url": "ahrm.png"
     },
     {
-      "hash": "sha256-hAR1udNV8pRpbzbM56bW228C6LyzoMuiZwJldkMhzEg=",
+      "hash": "sha256-84hyPcfmR8FDtqyo+q8nCn0UWb0QyTBQEpqtpxduk8g=",
       "url": "css\/app.css"
     },
     {
@@ -245,15 +245,19 @@
       "url": "icon-5123.png"
     },
     {
-      "hash": "sha256-XtCAk+D+MbHbe+LPvxvViKYXkFe4JpSm7LmhVc6Mzco=",
+      "hash": "sha256-b75xbXTsQaisV9qqVEEG+ALspkl5joqxnuRUQmPSxNw=",
       "url": "index.html"
+    },
+    {
+      "hash": "sha256-Yfxs5LeMczNDvC4SRLx3zb+MOP0O9dy8k07eVnf8LBQ=",
+      "url": "js\/cameraLoader.js"
     },
     {
       "hash": "sha256-UNthn0CsOtlHda4MVrPxjIQ5CFHAxyoxXEmbdBZYoPg=",
       "url": "manifest.json"
     },
     {
-      "hash": "sha256-TaLU2RI7v9dc5QRain\/CHCsutkxsSgZ8D2+AIYYJzdI=",
+      "hash": "sha256-Jz15ww6PmRQgfv+BkwOiLGxglX9TDwtwJZWFVeSbcp4=",
       "url": "AuroraHRMPWA.Client.styles.css"
     },
     {
@@ -1057,11 +1061,11 @@
       "url": "_framework\/AuroraHRMPWA.Shared.pdb"
     },
     {
-      "hash": "sha256-KB\/wV5Nks9F8NfRqc56Oab+T8jDde2wm9ZLhxvRLyw8=",
+      "hash": "sha256-o1smqbqIqzVKgxZoux8ONE5NpB6qMu10rNqvpCip2HU=",
       "url": "_framework\/AuroraHRMPWA.Client.dll"
     },
     {
-      "hash": "sha256-1OyskHHQAqzyURd8yHdLVTN3xBbBAIZAbojSYPobgfA=",
+      "hash": "sha256-4K9\/oAHC\/EJSeFY8zk6WQ8K9ZN+2TPgEjisWF6sbWno=",
       "url": "_framework\/AuroraHRMPWA.Client.pdb"
     },
     {
@@ -1069,9 +1073,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-VUzXs5cz5jaSjT8QRYI\/SlF9rLbiMrxMi9thu\/sdedc=",
+      "hash": "sha256-4R\/TND6wn+vIPVi9ah0exY7+1KGoyCfYchljncy44oE=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "+X3lgrDg"
+  "version": "wMi\/fCry"
 };

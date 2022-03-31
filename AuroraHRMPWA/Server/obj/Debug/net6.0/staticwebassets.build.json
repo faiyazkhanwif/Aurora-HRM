@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "D3v8eukLIB7efTOBCbE91LdHgOdl0M8xxKfZecBB7Zk=",
+  "Hash": "HLg4PF2Ndutl+pGDg09+LGMu2wSmq145GFIUNAR8Qag=",
   "Source": "AuroraHRMPWA.Server",
   "BasePath": "_content/AuroraHRMPWA.Server",
   "Mode": "Default",
@@ -8051,6 +8051,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\wwwroot\\js\\cameraLoader.js",
+      "SourceId": "AuroraHRMPWA.Client",
+      "SourceType": "Project",
+      "ContentRoot": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "js/cameraLoader.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\cameraLoader.js"
     },
     {
       "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\wwwroot\\manifest.json",

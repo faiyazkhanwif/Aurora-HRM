@@ -1,0 +1,32 @@
+﻿@page "/camera"
+@inject IJSRuntime JSRuntime;
+@inject NavigationManager NavigationManager
+
+<h5><strong>Camera</strong></h5>
+<hr />
+
+<div class="">
+    <video id="video" width="640" height="480" autoplay></video>
+</div>
+<br />
+<div class="row">
+    <div class = "col">
+        <button type="button" class="btn btn-lg btn-primary" @onclick="callcameraLoader">Start</button>
+    </div>
+    <div class = "col">
+        <button type="button" class="btn btn-lg btn-dark" @onclick="callcameraOffLoader">Stop</button>
+    </div>
+</div>
+
+@code {
+    private async Task callcameraLoader()
+    {
+        await JSRuntime.InvokeVoidAsync("loadCamera");
+    }
+
+    private async Task callcameraOffLoader()
+    {
+        await JSRuntime.InvokeVoidAsync("offloadCamera");
+        NavigationManager.NavigateTo("camera", true);
+    }
+}

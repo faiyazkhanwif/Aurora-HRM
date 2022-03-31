@@ -245,15 +245,19 @@
       "url": "icon-5123.png"
     },
     {
-      "hash": "sha256-XtCAk+D+MbHbe+LPvxvViKYXkFe4JpSm7LmhVc6Mzco=",
+      "hash": "sha256-b75xbXTsQaisV9qqVEEG+ALspkl5joqxnuRUQmPSxNw=",
       "url": "index.html"
+    },
+    {
+      "hash": "sha256-Yfxs5LeMczNDvC4SRLx3zb+MOP0O9dy8k07eVnf8LBQ=",
+      "url": "js\/cameraLoader.js"
     },
     {
       "hash": "sha256-UNthn0CsOtlHda4MVrPxjIQ5CFHAxyoxXEmbdBZYoPg=",
       "url": "manifest.json"
     },
     {
-      "hash": "sha256-x98bD4bypTNjes+JnFq68vsX+gyJrQZx9I1StoU6EaE=",
+      "hash": "sha256-Cri+Hp7CbW4zRA7Tw50RQ+4UVtM\/Z4QCEkpquaZItBo=",
       "url": "AuroraHRMPWA.Client.styles.css"
     },
     {
@@ -1053,11 +1057,11 @@
       "url": "_framework\/AuroraHRMPWA.Shared.dll"
     },
     {
-      "hash": "sha256-PaimmkAq5f+3\/aLbx3PysW6D3FzYPeOloIoBU2pfdOU=",
+      "hash": "sha256-K\/+DSx7bpvy9AuhZQBkozrRGmVZktYlOApUNJ7vY9iA=",
       "url": "_framework\/AuroraHRMPWA.Client.dll"
     },
     {
-      "hash": "sha256-JmHq+s8\/ZZVEVNK6GPUqSPqGAcJ7XTFK2HsPPbgttgE=",
+      "hash": "sha256-99rbO6AJjASdzmqUawlVvUVJOGHXQPwLIusy1omOJ18=",
       "url": "_framework\/AuroraHRMPWA.Client.pdb"
     },
     {
@@ -1065,9 +1069,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-ISFKmTuX1TsSK\/OJhlVMXt9uJ1QJNzqeuDVuYJiU3Jw=",
+      "hash": "sha256-5uXwKF+1w7N983Bb7nMNsA5Ua5i7JyN3ezK3Qfi1ozQ=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "KjXJNUn0"
+  "version": "1fkXJ0Je"
 };

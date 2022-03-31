@@ -837,3 +837,4 @@ E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\bin\Debug\net6.0\wwwroot\_
 E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll.gz
 E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Authorization.dll
 E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\obj\Debug\net6.0\build-gz\SG7k+uPz.gz
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\obj\Debug\net6.0\scopedcss\Pages\Camera.razor.rz.scp.css
