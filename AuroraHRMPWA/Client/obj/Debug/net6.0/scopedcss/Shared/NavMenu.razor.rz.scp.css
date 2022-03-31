@@ -3,12 +3,12 @@
 }
 
 .navbar-toggler[b-9tmp1sm1bs] {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(158, 158, 158,0.25);
 }
 
 .top-row[b-9tmp1sm1bs] {
     height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(232, 232, 232,0.30);
 }
 
 .navbar-brand[b-9tmp1sm1bs] {
@@ -50,7 +50,7 @@
     }
 
     .nav-item[b-9tmp1sm1bs]  a {
-        color: #d7d7d7;
+        color: #5c5c5c;
         border-radius: 4px;
         height: 2rem;
         display: flex;
@@ -59,13 +59,13 @@
     }
 
         .nav-item[b-9tmp1sm1bs]  a.active {
-            background-color: rgba(255,255,255,0.25);
-            color: white;
+            background-color: rgba(255,255,255,0.3);
+            color: black;
         }
 
         .nav-item[b-9tmp1sm1bs]  a:hover {
-            background-color: rgba(255,255,255,0.1);
-            color: white;
+            background-color: rgba(255,255,255,0.2);
+            color: #424242;
         }
 
 @media (min-width: 641px) {

@@ -36,12 +36,14 @@ p[b-b0xp573z4b] {
     }
 
 #b1[b-8g42dhj59n], #b3[b-8g42dhj59n] {
-    background-color: rgba(255, 153, 51, 0.8);
+    background-color: rgba(249,196,152,0.8);
+    color: #424242;
     border-radius: 6px;
 }
 
     #b1:hover[b-8g42dhj59n], #b3:hover[b-8g42dhj59n] {
-        background-color: rgba(253, 127, 44, 0.8);
+        background-color: rgba(249,196,152,1);
+        color: black;
         transform: scale(1.1);
         transition: all 0.3s;
     }
@@ -130,7 +132,7 @@ main[b-5jn4fhg0h2] {
 }
 
 .sidebar[b-5jn4fhg0h2] {
-    background-image: linear-gradient(180deg, rgb(9, 9, 9) 70%, #FD7F2C 130%);
+    background-image: linear-gradient(180deg, rgb(249, 196, 152) 50%, #e0e0e0 130%);
 }
 
 .top-row[b-5jn4fhg0h2] {
@@ -206,12 +208,12 @@ main[b-5jn4fhg0h2] {
 }
 
 .navbar-toggler[b-9tmp1sm1bs] {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(158, 158, 158,0.25);
 }
 
 .top-row[b-9tmp1sm1bs] {
     height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(232, 232, 232,0.30);
 }
 
 .navbar-brand[b-9tmp1sm1bs] {
@@ -253,7 +255,7 @@ main[b-5jn4fhg0h2] {
     }
 
     .nav-item[b-9tmp1sm1bs]  a {
-        color: #d7d7d7;
+        color: #5c5c5c;
         border-radius: 4px;
         height: 2rem;
         display: flex;
@@ -262,13 +264,13 @@ main[b-5jn4fhg0h2] {
     }
 
         .nav-item[b-9tmp1sm1bs]  a.active {
-            background-color: rgba(255,255,255,0.25);
-            color: white;
+            background-color: rgba(255,255,255,0.3);
+            color: black;
         }
 
         .nav-item[b-9tmp1sm1bs]  a:hover {
-            background-color: rgba(255,255,255,0.1);
-            color: white;
+            background-color: rgba(255,255,255,0.2);
+            color: #424242;
         }
 
 @media (min-width: 641px) {

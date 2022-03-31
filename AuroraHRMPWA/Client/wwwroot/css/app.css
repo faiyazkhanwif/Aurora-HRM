@@ -77,7 +77,7 @@ a, .btn-link {
 footer {
     background: rgb(249,196,152);
     background: linear-gradient(90deg, rgba(249,196,152,1) 0%, rgba(237,237,237,1) 100%);
-    color: black;
+    color: #5c5c5c;
     line-height: 50px;
     padding: 0 20px;
 }

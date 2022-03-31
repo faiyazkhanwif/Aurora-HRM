@@ -16,12 +16,14 @@
     }
 
 #b1[b-8g42dhj59n], #b3[b-8g42dhj59n] {
-    background-color: rgba(255, 153, 51, 0.8);
+    background-color: rgba(249,196,152,0.8);
+    color: #424242;
     border-radius: 6px;
 }
 
     #b1:hover[b-8g42dhj59n], #b3:hover[b-8g42dhj59n] {
-        background-color: rgba(253, 127, 44, 0.8);
+        background-color: rgba(249,196,152,1);
+        color: black;
         transform: scale(1.1);
         transition: all 0.3s;
     }

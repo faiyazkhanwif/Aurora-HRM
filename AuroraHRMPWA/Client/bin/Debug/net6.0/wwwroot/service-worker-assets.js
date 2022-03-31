@@ -245,11 +245,11 @@
       "url": "icon-5123.png"
     },
     {
-      "hash": "sha256-XQROO2JIcRXxRTFVsEN53uM\/zP8NjYWhXBXsJw6UcRQ=",
+      "hash": "sha256-XtCAk+D+MbHbe+LPvxvViKYXkFe4JpSm7LmhVc6Mzco=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-qPU44A8fbxjsJdemUkEHQx9Ee9PT9fOFjIFtGNcPaKo=",
+      "hash": "sha256-UNthn0CsOtlHda4MVrPxjIQ5CFHAxyoxXEmbdBZYoPg=",
       "url": "manifest.json"
     },
     {
@@ -1073,5 +1073,5 @@
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "Vj\/eJSK9"
+  "version": "+X3lgrDg"
 };
