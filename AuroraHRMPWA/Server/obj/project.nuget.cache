@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "gYuOxWCeYpcsL5A/PxQ7rCn78K0EYUxcBIicJ1Ej8TmLa6xlG4Qf0qklRtKJ9qTKU4i5a6dnA4BCLmf/03faPw==",
+  "dgSpecHash": "v6iDHwwm7L5+rRkABd8maSY5YBnjt4kZgcHtH4VGlcAvjUD+t6H2Gb+dl+MmPEvReOghhaCWFs5ZUMqqA17zXQ==",
   "success": true,
   "projectFilePath": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Server\\AuroraHRMPWA.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\faiya\\.nuget\\packages\\blazored.localstorage\\4.2.0\\blazored.localstorage.4.2.0.nupkg.sha512",
+    "C:\\Users\\faiya\\.nuget\\packages\\browserinterop\\1.1.2\\browserinterop.1.1.2.nupkg.sha512",
     "C:\\Users\\faiya\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\faiya\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.3\\microsoft.aspnetcore.authorization.6.0.3.nupkg.sha512",
     "C:\\Users\\faiya\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.3\\microsoft.aspnetcore.components.6.0.3.nupkg.sha512",

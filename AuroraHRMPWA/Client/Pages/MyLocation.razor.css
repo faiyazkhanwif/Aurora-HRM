@@ -1,0 +1,19 @@
+﻿button {
+    margin: 0 auto;
+    display: block;
+}
+
+    button:hover {
+        transform: scale(1.1);
+        transition: all 0.3s;
+    }
+.content {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: right;
+}
+
+.detailcard {
+    background: rgb(255,239,226);
+    background: radial-gradient(circle, rgba(255,239,226,1) 0%, rgba(255,255,255,1) 180%);
+}

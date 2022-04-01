@@ -1,7 +1,7 @@
 global using AuroraHRMPWA.Client.Services.AuthService;
 global using AuroraHRMPWA.Shared;
-global using System.Net.Http.Json;
 global using Microsoft.AspNetCore.Components.Authorization;
+global using System.Net.Http.Json;
 using AuroraHRMPWA.Client;
 using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.Web;
@@ -16,6 +16,6 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddScoped<IAuthServiceClient, AuthServiceClient>();
 builder.Services.AddOptions();
 builder.Services.AddAuthorizationCore();
-builder.Services.AddScoped<AuthenticationStateProvider,CustomAuthStateProvider>();
+builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
 
 await builder.Build().RunAsync();

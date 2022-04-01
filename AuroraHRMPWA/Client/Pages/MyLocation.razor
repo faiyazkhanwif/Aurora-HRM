@@ -1,0 +1,55 @@
+﻿@page "/mylocation"
+@inject IJSRuntime jsRuntime;
+@using BrowserInterop.Extensions
+@using BrowserInterop.Geolocation
+
+<h5><strong>My Location</strong></h5>
+<hr />
+
+<div class="container">
+    @if (@geolocationPosition != null)
+    {
+        <div class="row detailcard shadow-sm animate__animated animate__backInDown">
+            <div class="col">
+                <p><b>Latitude:</b> @geolocationPosition.Coords.Latitude</p>
+                <p><b>Longitude:</b> @geolocationPosition.Coords.Longitude</p>
+            </div>
+            <div class="col content">
+                <a href="@mapURLnew" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> Show on Google Map</a>
+            </div>
+        </div>
+    }
+</div>
+
+<br />
+<button type="button" class="btn btn-dark" @onclick="getGeolocation">Generate Location</button>
+
+
+
+
+@code {
+    public string mapURLnew = string.Empty;
+    private WindowNavigatorGeolocation geolocation;
+    private GeolocationPosition geolocationPosition;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var window = await jsRuntime.Window();
+        var navigator = await window.Navigator();
+
+        geolocation = navigator.Geolocation;
+    }
+
+    public async Task getGeolocation()
+    {
+        geolocationPosition = (await geolocation.GetCurrentPosition(new PositionOptions()
+            {
+                EnableHighAccuracy = true,
+                MaximumAgeTimeSpan = TimeSpan.FromHours(1),
+                TimeoutTimeSpan = TimeSpan.FromMinutes(1)
+            })).Location;
+        
+        mapURLnew = "https://maps.google.com/maps?q="+geolocationPosition.Coords.Latitude+","+geolocationPosition.Coords.Longitude+"&hl=es&z=14&amp;output=embed";
+        //mapURLnew = "https://maps.google.com/maps?q="+3.087999+","+101.768760+"&hl=es&z=14&amp;output=embed";
+    }
+}

@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[4.2.0, )"
             },
+            "BrowserInterop": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
             "Microsoft.AspNetCore.Components.Authorization": {
               "target": "Package",
               "version": "[6.0.3, )"

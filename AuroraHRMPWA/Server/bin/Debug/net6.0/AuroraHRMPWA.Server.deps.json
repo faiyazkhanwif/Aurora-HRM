@@ -31,6 +31,18 @@
           }
         }
       },
+      "BrowserInterop/1.1.2": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "6.0.3",
+          "Microsoft.JSInterop": "6.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.1/BrowserInterop.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
@@ -676,6 +688,7 @@
         "dependencies": {
           "AuroraHRMPWA.Shared": "1.0.0",
           "Blazored.LocalStorage": "4.2.0",
+          "BrowserInterop": "1.1.2",
           "Microsoft.AspNetCore.Components.Authorization": "6.0.3",
           "Microsoft.AspNetCore.Components.WebAssembly": "6.0.3"
         },
@@ -702,6 +715,13 @@
       "sha512": "sha512-cn6h0QrLw0AIwkx/LiogtBycBFHIeqT/ptXIt871/07qTCvIGXCQZpc1s38wpmTfYLvpha5+5yn6TvIaY9ziyg==",
       "path": "blazored.localstorage/4.2.0",
       "hashPath": "blazored.localstorage.4.2.0.nupkg.sha512"
+    },
+    "BrowserInterop/1.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7BSD3iclsfKftdY2etSDdPFnkK0+etvXILsOkuFXDpP8Z7J1SLuJsbS/ydE+i3iZXPF7CiBChaOonJE1noE/PQ==",
+      "path": "browserinterop/1.1.2",
+      "hashPath": "browserinterop.1.1.2.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",

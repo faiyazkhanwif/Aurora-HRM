@@ -1,0 +1,19 @@
+button[b-np2g72lhsj] {
+    margin: 0 auto;
+    display: block;
+}
+
+    button:hover[b-np2g72lhsj] {
+        transform: scale(1.1);
+        transition: all 0.3s;
+    }
+.content[b-np2g72lhsj] {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: right;
+}
+
+.detailcard[b-np2g72lhsj] {
+    background: rgb(255,239,226);
+    background: radial-gradient(circle, rgba(255,239,226,1) 0%, rgba(255,255,255,1) 180%);
+}

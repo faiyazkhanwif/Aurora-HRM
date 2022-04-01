@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HLg4PF2Ndutl+pGDg09+LGMu2wSmq145GFIUNAR8Qag=",
+  "Hash": "CYEPm5lAN1NeN3XS2DaiIcksQNCJbqaK1VRdp/n3kjo=",
   "Source": "AuroraHRMPWA.Server",
   "BasePath": "_content/AuroraHRMPWA.Server",
   "Mode": "Default",
@@ -28,6 +28,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\faiya\\.nuget\\packages\\browserinterop\\1.1.2\\staticwebassets\\scripts.js",
+      "SourceId": "BrowserInterop",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\faiya\\.nuget\\packages\\browserinterop\\1.1.2\\staticwebassets\\",
+      "BasePath": "_content/BrowserInterop",
+      "RelativePath": "scripts.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\faiya\\.nuget\\packages\\browserinterop\\1.1.2\\staticwebassets\\scripts.js"
+    },
     {
       "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\AuroraHRMPWA.Client.dll",
       "SourceId": "AuroraHRMPWA.Client",
@@ -146,6 +163,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\faiya\\.nuget\\packages\\blazored.localstorage\\4.2.0\\lib\\net6.0\\Blazored.LocalStorage.dll"
+    },
+    {
+      "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\BrowserInterop.dll",
+      "SourceId": "AuroraHRMPWA.Client",
+      "SourceType": "Project",
+      "ContentRoot": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/BrowserInterop.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\faiya\\.nuget\\packages\\browserinterop\\1.1.2\\lib\\netstandard2.1\\BrowserInterop.dll"
     },
     {
       "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\dotnet.6.0.3.lwep53xpqq.js",
@@ -4804,6 +4838,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.UnmanagedMemoryStream.dll"
+    },
+    {
+      "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\obj\\Debug\\net6.0\\build-gz\\FBe4GFWf.gz",
+      "SourceId": "AuroraHRMPWA.Client",
+      "SourceType": "Project",
+      "ContentRoot": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/BrowserInterop.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\BrowserInterop.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\BrowserInterop.dll"
     },
     {
       "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\obj\\Debug\\net6.0\\build-gz\\fEgJ9AK+.gz",
