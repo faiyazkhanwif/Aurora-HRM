@@ -17,6 +17,24 @@
                     Gender = "Male",
                     Relation = Relation.Parent,
                     UserId = 31
+                },
+                new FamilyMember
+                {
+                    Id = 2,
+                    Name = "Kareeem",
+                    Age = 12,
+                    Gender = "Male",
+                    Relation = Relation.Child,
+                    UserId = 29
+                },
+                new FamilyMember
+                {
+                    Id = 3,
+                    Name = "Kareeem",
+                    Age = 10,
+                    Gender = "Female",
+                    Relation = Relation.Child,
+                    UserId = 31
                 }
                 );
 

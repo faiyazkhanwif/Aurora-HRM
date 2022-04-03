@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hv4Jf5clSSx6Ua8gGjyrgPFp2g6+GlX8ZXiB5IcBnDo=",
+  "Hash": "CYEPm5lAN1NeN3XS2DaiIcksQNCJbqaK1VRdp/n3kjo=",
   "Source": "AuroraHRMPWA.Server",
   "BasePath": "_content/AuroraHRMPWA.Server",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "AuroraHRMPWA.Client",
       "GetPublishAssetsTargets": "ComputeFilesToPublish;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "BuildProjectReferences=false;ResolveAssemblyReferencesFindRelatedSatellites=true;_PublishingBlazorWasmProject=true",
+      "AdditionalPublishProperties": "BuildProjectReferences=false;ResolveAssemblyReferencesFindRelatedSatellites=true;_PublishingBlazorWasmProject=true;Configuration=Debug;Platform=AnyCPU",
       "AdditionalPublishPropertiesToRemove": "NoBuild;RuntimeIdentifier;WebPublishProfileFile;TargetFramework",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
     }
   ],
@@ -233,6 +233,23 @@
       "OriginalItemSpec": "C:\\Users\\faiya\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.3\\runtimes\\browser-wasm\\native\\dotnet.wasm"
     },
     {
+      "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
+      "SourceId": "AuroraHRMPWA.Client",
+      "SourceType": "Project",
+      "ContentRoot": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt.dat",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "native",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\faiya\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.3\\runtimes\\browser-wasm\\native\\icudt.dat"
+    },
+    {
       "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt_CJK.dat",
       "SourceId": "AuroraHRMPWA.Client",
       "SourceType": "Project",
@@ -282,23 +299,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\faiya\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.3\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
-    },
-    {
-      "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
-      "SourceId": "AuroraHRMPWA.Client",
-      "SourceType": "Project",
-      "ContentRoot": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt.dat",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorWebAssemblyResource",
-      "AssetTraitValue": "native",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\faiya\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.3\\runtimes\\browser-wasm\\native\\icudt.dat"
     },
     {
       "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
@@ -7016,23 +7016,6 @@
       "OriginalItemSpec": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\obj\\Debug\\net6.0\\scopedcss\\bundle\\AuroraHRMPWA.Client.styles.css"
     },
     {
-      "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\obj\\Debug\\net6.0\\service-worker-assets.js.build",
-      "SourceId": "AuroraHRMPWA.Client",
-      "SourceType": "Project",
-      "ContentRoot": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "service-worker-assets.js",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorServiceWorker",
-      "AssetTraitValue": "ServiceWorkerManifest",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "obj\\Debug\\net6.0\\service-worker-assets.js.build"
-    },
-    {
       "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\obj\\Debug\\net6.0\\service-worker\\service-worker.js",
       "SourceId": "AuroraHRMPWA.Client",
       "SourceType": "Project",
@@ -7048,6 +7031,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "wwwroot\\service-worker.js"
+    },
+    {
+      "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\obj\\Debug\\net6.0\\service-worker-assets.js.build",
+      "SourceId": "AuroraHRMPWA.Client",
+      "SourceType": "Project",
+      "ContentRoot": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "service-worker-assets.js",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorServiceWorker",
+      "AssetTraitValue": "ServiceWorkerManifest",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "obj\\Debug\\net6.0\\service-worker-assets.js.build"
     },
     {
       "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\wwwroot\\ahrm.png",
@@ -7849,23 +7849,6 @@
       "OriginalItemSpec": "wwwroot\\css\\font-awesome\\webfonts\\fa-v4compatibility.woff2"
     },
     {
-      "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "AuroraHRMPWA.Client",
-      "SourceType": "Project",
-      "ContentRoot": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
-    },
-    {
       "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "AuroraHRMPWA.Client",
       "SourceType": "Project",
@@ -7966,6 +7949,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "AuroraHRMPWA.Client",
+      "SourceType": "Project",
+      "ContentRoot": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
