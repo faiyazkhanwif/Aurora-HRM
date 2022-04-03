@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Server\\AuroraHRMPWA.Server.csproj": {}
+    "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\server\\AuroraHRMPWA.Server.csproj": {}
   },
   "projects": {
     "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\AuroraHRMPWA.Client.csproj": {
@@ -96,14 +96,14 @@
         }
       }
     },
-    "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Server\\AuroraHRMPWA.Server.csproj": {
+    "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\server\\AuroraHRMPWA.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Server\\AuroraHRMPWA.Server.csproj",
+        "projectUniqueName": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\server\\AuroraHRMPWA.Server.csproj",
         "projectName": "AuroraHRMPWA.Server",
-        "projectPath": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Server\\AuroraHRMPWA.Server.csproj",
+        "projectPath": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\server\\AuroraHRMPWA.Server.csproj",
         "packagesPath": "C:\\Users\\faiya\\.nuget\\packages\\",
-        "outputPath": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Server\\obj\\",
+        "outputPath": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\faiya\\AppData\\Roaming\\NuGet\\NuGet.Config",
