@@ -2,11 +2,11 @@
 {
     public interface IEmployeeDetailsService
     {
-        Task<ServiceResponse<User>> GetUserAsync(string userId);
-        Task<ServiceResponse<List<FamilyMember>>> GetFamilyMembersAsync(string userId);
-        Task<ServiceResponse<List<BankAccount>>> GetBankAccountsAsync(string userId);
-        Task<ServiceResponse<List<EmployeeExperience>>> GetEmployeeExperiencesAsync(string userId);
-        Task<ServiceResponse<List<EmploymentDetail>>> GetEmploymentDetailsAsync(string userId);
-        Task<ServiceResponse<List<Qualification>>> GetQualificationsAsync(string userId);
+        Task<ServiceResponse<User>> GetUserAsync(int userId);
+        Task<ServiceResponse<List<FamilyMember>>> GetFamilyMembersAsync(int userId);
+        Task<ServiceResponse<List<BankAccount>>> GetBankAccountsAsync(int userId);
+        Task<ServiceResponse<List<EmployeeExperience>>> GetEmployeeExperiencesAsync(int userId);
+        Task<ServiceResponse<List<EmploymentDetail>>> GetEmploymentDetailsAsync(int userId);
+        Task<ServiceResponse<List<Qualification>>> GetQualificationsAsync(int userId);
     }
 }

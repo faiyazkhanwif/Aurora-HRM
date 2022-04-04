@@ -2,34 +2,53 @@
 {
     public class EmployeeDetailsService : IEmployeeDetailsService
     {
-        public Task<ServiceResponse<List<BankAccount>>> GetBankAccountsAsync(string userId)
+        private readonly DataContext _context;
+
+        public EmployeeDetailsService(DataContext context)
+        {
+            _context = context;
+        }
+        public Task<ServiceResponse<List<BankAccount>>> GetBankAccountsAsync(int userId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ServiceResponse<List<EmployeeExperience>>> GetEmployeeExperiencesAsync(string userId)
+        public Task<ServiceResponse<List<EmployeeExperience>>> GetEmployeeExperiencesAsync(int userId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ServiceResponse<List<EmploymentDetail>>> GetEmploymentDetailsAsync(string userId)
+        public Task<ServiceResponse<List<EmploymentDetail>>> GetEmploymentDetailsAsync(int userId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ServiceResponse<List<FamilyMember>>> GetFamilyMembersAsync(string userId)
+        public Task<ServiceResponse<List<FamilyMember>>> GetFamilyMembersAsync(int userId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ServiceResponse<List<Qualification>>> GetQualificationsAsync(string userId)
+        public Task<ServiceResponse<List<Qualification>>> GetQualificationsAsync(int userId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ServiceResponse<User>> GetUserAsync(string userId)
+        public async Task<ServiceResponse<User>> GetUserAsync(int userId)
         {
-            throw new NotImplementedException();
+            var response = new ServiceResponse<User>();
+            
+            var user = await _context.Users.FindAsync(userId);
+            if(user == null)
+            {
+                response.Success = false;
+                response.Message = "Could not find the user. :(";
+            }
+            else
+            {
+                response.Data = user;
+            }
+
+            return response;
         }
     }
 }

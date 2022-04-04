@@ -1,5 +1,6 @@
 global using AuroraHRMPWA.Server.Data;
 global using AuroraHRMPWA.Server.Services.AuthService;
+global using AuroraHRMPWA.Server.Services.EmployeeDetailsService;
 global using AuroraHRMPWA.Shared;
 global using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +12,7 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IEmployeeDetailsService, EmployeeDetailsService>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddEndpointsApiExplorer();
