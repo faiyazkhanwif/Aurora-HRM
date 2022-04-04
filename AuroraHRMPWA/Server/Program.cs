@@ -3,6 +3,8 @@ global using AuroraHRMPWA.Server.Services.AuthService;
 global using AuroraHRMPWA.Server.Services.EmployeeDetailsService;
 global using AuroraHRMPWA.Shared;
 global using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,9 @@ builder.Services.AddDbContext<DataContext>(options =>
 });
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IEmployeeDetailsService, EmployeeDetailsService>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.Configure<IdentityOptions>(options =>
+    options.ClaimsIdentity.UserIdClaimType = ClaimTypes.NameIdentifier);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddEndpointsApiExplorer();

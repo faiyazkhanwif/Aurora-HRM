@@ -1,37 +1,101 @@
 ﻿@page "/mycv"
+@using System.Security.Claims
+@inject IEmployeeDetailsServiceClient EmployeeDetailsService
+@inject AuthenticationStateProvider AuthenticationStateProvider
 
-<PageTitle>My Profile</PageTitle>
-<h5><strong>My Profile</strong></h5>
+<PageTitle>My CV</PageTitle>
+<h5><strong>My CV</strong></h5>
 <hr />
 
+
 <div class="row animate__animated animate__fadeIn">
-    <div class="col-8">
-        <AuthorizeView>
-            <Authorized>
-                <p>Account: <span class="text-primary h6"><b>@context.User.Identity.Name</b></span></p>
-            </Authorized>
-        </AuthorizeView>
-    </div>
-    <div class="col">
-        <div style="text-align: right;">
-            <AuthorizeView Roles="HR User">
-                <Authorized><small><i class="fa fa-suitcase" aria-hidden="true"></i> HR User</small></Authorized>
-            </AuthorizeView>
-            <AuthorizeView Roles="Employee">
-                <Authorized><small><i class="fa fa-user" aria-hidden="true"></i> Employee</small></Authorized>
-            </AuthorizeView>
-            <AuthorizeView Roles="Manager">
-                <Authorized><small><i class="fa fa-users" aria-hidden="true"></i> Manager</small></Authorized>
-            </AuthorizeView>
-            <AuthorizeView Roles="HR Manager">
-                <Authorized><small><i class="fa fa-suitcase" aria-hidden="true"></i> HR Manager</small></Authorized>
-            </AuthorizeView>
+    @if (currentUser != null)
+    {
+        <div class="row animate__animated animate__fadeIn">
+            <div class="col-8">
+                <p>Account: <span class="text-primary h6"><b>@currentUser.Email</b></span></p>
+            </div>
+            <div class="col">
+                <div style="text-align: right;">
+                    <span><small><i class="fa fa-user"></i></small> @currentUser.Role</span>
+                </div>
+            </div>
+            <p>@currentUser.Name</p>
+            <p>@currentUser.Gender</p>
+            <p>@currentUser.MaritalStatus</p>
+            <p>@currentUser.BirthDate.Day/@currentUser.BirthDate.Month/@currentUser.BirthDate.Year</p>
         </div>
-    </div>
+    }
+    else
+    {
+        <div style="text-align:center;">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <div class="col animate__animated animate__rotateIn">
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <div class="animate__animated animate__pulse animate__infinite animate__delay-1s">
+                            <img src="ahrm.png" alt="Alternate Text" width="150" />
+                        </div>
+                        <br />
+                        <div class="animate__animated animate__fadeIn">
+                            <h5 class="">@message</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+    }
 </div>
 
 
 
 @code {
+    private User? currentUser = null;
+    private string message = string.Empty;
+    //private string message1;
+
+
+    //[Parameter]
+    //public int Id { get; set; }
+
+    /*
+    protected override async Task OnInitializedAsync()
+        {
+        var state = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var userstr = state.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        userId = int.Parse(userstr);
+        message = userId;
+        message1 = message.ToString();
+        //var res = await EmployeeDetailsService.GetCurrentUserDetail();
+        //currentUser = res.Data;
+
+    }
+    */
+    protected override async Task OnInitializedAsync()
+    {
+        message = "Loading.......";
+        var state = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var userstr = state.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        int userId = int.Parse(userstr);
+
+        var result = await EmployeeDetailsService.GetUserDetail(userId);
+        if (!result.Success)
+        {
+            message = result.Message;
+        }
+        else
+        {
+            currentUser = result.Data;
+        }
+    }
 
 }
