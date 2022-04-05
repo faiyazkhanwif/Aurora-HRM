@@ -6,55 +6,124 @@
 <PageTitle>My CV</PageTitle>
 <h5><strong>My CV</strong></h5>
 <hr />
-
-
-<div class="row animate__animated animate__fadeIn">
-    @if (currentUser != null)
-    {
-        <div class="row animate__animated animate__fadeIn">
-            <div class="col-8">
-                <p>Account: <span class="text-primary h6"><b>@currentUser.Email</b></span></p>
-            </div>
-            <div class="col">
-                <div style="text-align: right;">
-                    <span><small><i class="fa fa-user"></i></small> @currentUser.Role</span>
-                </div>
-            </div>
-            <p>@currentUser.Name</p>
-            <p>@currentUser.Gender</p>
-            <p>@currentUser.MaritalStatus</p>
-            <p>@currentUser.BirthDate.Day/@currentUser.BirthDate.Month/@currentUser.BirthDate.Year</p>
-        </div>
-    }
-    else
-    {
-        <div style="text-align:center;">
-            <div class="row">
-                <div class="col"></div>
-                <div class="col">
-                    <div class="col animate__animated animate__rotateIn">
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <div class="animate__animated animate__pulse animate__infinite animate__delay-1s">
-                            <img src="ahrm.png" alt="Alternate Text" width="150" />
-                        </div>
-                        <br />
-                        <div class="animate__animated animate__fadeIn">
-                            <h5 class="">@message</h5>
+@if (currentUser != null)
+{
+    <div class="animate__animated animate__fadeIn">
+        <div class="container-lg my-2">
+            <div class="row gx-5 gap-3">
+                <div class="col-md">
+                    <div class="card shadow-sm h-100">
+                        <p class="pbackground">&nbsp;&nbsp;<i class="fa fa-user" aria-hidden="true"></i>&nbsp;<b>Personal</b></p>
+                        <div class="card-body">
+                            <ul>
+                                <li><small><b>Name:</b> <span class="text-primary">@currentUser.Name</span></small></li>
+                                <li><small><b>Title:</b> <span class="text-dark">@currentUser.Title</span></small></li>
+                                <li><small><b>Date of Birth:</b> <span class="text-dark">@currentUser.BirthDate.Day/@currentUser.BirthDate.Month/@currentUser.BirthDate.Year</span></small></li>
+                                <li><small><b>Gender:</b> <span class="text-dark">@currentUser.Gender</span></small></li>
+                                <li><small><b>Marital Status:</b> <span class="text-dark">@currentUser.MaritalStatus</span></small></li>
+                                <li><small><b>Nationality:</b> <span class="text-dark">@currentUser.Nationality</span></small></li>
+                                <li><small><b>Passport:</b> <span class="text-dark">@currentUser.Passport</span></small></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col"></div>
+                <div class="col-md">
+                    <div class="card shadow-sm h-100">
+                        <p class="pbackground">&nbsp;&nbsp;<i class="fa fa-file-text" aria-hidden="true"></i>&nbsp;<b>Account Information</b></p>
+                        <div class="card-body">
+                            <ul>
+                                <li><small><b>Account Email:</b> <span class="text-primary">@currentUser.Email</span></small></li>
+                                <li><small><b>Role:</b> <span class="text-dark">@currentUser.Role</span></small></li>
+                                <li><small><b>Created on:</b> <span class="text-dark">@currentUser.DateCreated.Day/@currentUser.DateCreated.Month/@currentUser.DateCreated.Year</span></small></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row gx-5 gap-3">
+                <div class="col-md">
+                    <div class="card shadow-sm h-100">
+                        <p class="pbackground">&nbsp;&nbsp;<i class="fa fa-map" aria-hidden="true"></i>&nbsp;<b>Address</b></p>
+                        <div class="card-body">
+                            <ul>
+                                <li><small><b>Address:</b> <span class="text-dark">@currentUser.Address</span></small></li>
+                                <li><small><b>State:</b> <span class="text-dark">@currentUser.State</span></small></li>
+                                <li><small><b>Post Code:</b> <span class="text-dark">@currentUser.PostCode</span></small></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card shadow-sm h-100">
+                        <p class="pbackground">&nbsp;&nbsp;<i class="fa fa-phone" aria-hidden="true"></i>&nbsp;<b>Contact</b></p>
+                        <div class="card-body">
+                            <ul>
+                                <li><small><b>Phone:</b> <span class="text-dark">@currentUser.Phone</span></small></li>
+                                <li><small><b>Email:</b> <span class="text-dark">@currentUser.Email</span></small></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col">
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination pagination-sm">
+                            <li class="page-item">
+                                <a class="page-link" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="mycv">1</a></li>
+                            <li class="page-item"><a class="page-link" href="mycv/2">2</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="mycv/2" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col">
+                </div>
             </div>
         </div>
-    }
-</div>
+    </div>
+}
+else
+{
+    <div style="text-align:center;">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <div class="col animate__animated animate__rotateIn">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <div class="animate__animated animate__pulse animate__infinite animate__delay-1s">
+                        <img src="ahrm.png" alt="Alternate Text" width="150" />
+                    </div>
+                    <br />
+                    <div class="animate__animated animate__fadeIn">
+                        <p class="">@message</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+}
 
 
 

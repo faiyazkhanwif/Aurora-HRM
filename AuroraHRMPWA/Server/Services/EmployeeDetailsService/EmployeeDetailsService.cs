@@ -12,21 +12,59 @@ namespace AuroraHRMPWA.Server.Services.EmployeeDetailsService
             _context = context;
             _httpContextAccessor = httpContextAccessor;
         }
+        
         public int GetUserId() => int.Parse(_httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
         public string GetUserEmail() => _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.Name);
-        public Task<ServiceResponse<List<BankAccount>>> GetBankAccountsAsync(int userId)
+        
+        public async Task<ServiceResponse<List<BankAccount>>> GetBankAccountsAsync(int userId)
         {
-            throw new NotImplementedException();
+            var response = new ServiceResponse<List<BankAccount>>
+            {
+                Data = await _context.BankAccounts
+                        .Where(p => p.UserId == userId)
+                        .ToListAsync()
+            };
+            if (response.Data.Count == 0)
+            {
+                response.Success = false;
+                response.Message = "Could not find any bank accounts for the user.";
+            }
+
+            return response;
         }
 
-        public Task<ServiceResponse<List<EmployeeExperience>>> GetEmployeeExperiencesAsync(int userId)
+        public async Task<ServiceResponse<List<EmployeeExperience>>> GetEmployeeExperiencesAsync(int userId)
         {
-            throw new NotImplementedException();
+            var response = new ServiceResponse<List<EmployeeExperience>>
+            {
+                Data = await _context.EmployeeExperiences
+            .Where(p => p.UserId == userId)
+            .ToListAsync()
+            };
+            if (response.Data.Count == 0)
+            {
+                response.Success = false;
+                response.Message = "Could not find any previous experience for the user.";
+            }
+
+            return response;
         }
 
-        public Task<ServiceResponse<List<EmploymentDetail>>> GetEmploymentDetailsAsync(int userId)
+        public async Task<ServiceResponse<EmploymentDetail>> GetEmploymentDetailsAsync(int userId)
         {
-            throw new NotImplementedException();
+            var response = new ServiceResponse<EmploymentDetail>
+            {
+                Data = await _context.EmploymentDetails
+                    .Where(p => p.UserId == userId)
+                    .FirstOrDefaultAsync()
+            };
+            if (response.Data == null)
+            {
+                response.Success = false;
+                response.Message = "Could not find any employment details for the user.";
+            }
+
+            return response;
         }
 
         public Task<ServiceResponse<List<FamilyMember>>> GetFamilyMembersAsync(int userId)
@@ -34,9 +72,20 @@ namespace AuroraHRMPWA.Server.Services.EmployeeDetailsService
             throw new NotImplementedException();
         }
 
-        public Task<ServiceResponse<List<Qualification>>> GetQualificationsAsync(int userId)
+        public async Task<ServiceResponse<List<Qualification>>> GetQualificationsAsync(int userId)
         {
-            throw new NotImplementedException();
+            var response = new ServiceResponse<List<Qualification>>
+            {
+                Data = await _context.Qualifications
+            .Where(p => p.UserId == userId)
+            .ToListAsync()
+            };
+            if (response.Data.Count == 0)
+            {
+                response.Success = false;
+                response.Message = "Could not find any qualification for the user.";
+            }
+            return response;
         }
 
         public async Task<ServiceResponse<User>> GetUserAsync(int userId)
@@ -46,9 +95,9 @@ namespace AuroraHRMPWA.Server.Services.EmployeeDetailsService
             //var userstr = state.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             //int userId = int.Parse(userstr);
             var response = new ServiceResponse<User>();
-            
+
             var user = await _context.Users.FindAsync(userId);
-            if(user == null)
+            if (user == null)
             {
                 response.Success = false;
                 response.Message = "Could not find the user. :(";

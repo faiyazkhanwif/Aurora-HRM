@@ -1,0 +1,39 @@
+.pbackground[b-b2h19aopvf] {
+    background-color: #EBEBEB;
+}
+
+.icon[b-b2h19aopvf] {
+    position: absolute;
+    top: 10px;
+    left: auto;
+    right: 10px;
+}
+
+.card[b-b2h19aopvf] {
+    background: rgb(255,239,226);
+    background: radial-gradient(circle, rgba(255,239,226,1) 0%, rgba(255,255,255,1) 180%);
+}
+.pagination > li > a[b-b2h19aopvf] {
+    background-color: white;
+    color: #f5af76;
+}
+
+    .pagination > li > a:focus[b-b2h19aopvf],
+    .pagination > li > a:hover[b-b2h19aopvf],
+    .pagination > li > span:focus[b-b2h19aopvf],
+    .pagination > li > span:hover[b-b2h19aopvf] {
+        color: #5a5a5a;
+        background-color: #eee;
+        border-color: #ddd;
+    }
+
+.pagination > .active > a[b-b2h19aopvf] {
+    color: white;
+    background-color: #f5af76 !Important;
+    border: solid 1px #f5af76 !Important;
+}
+
+    .pagination > .active > a:hover[b-b2h19aopvf] {
+        background-color: #f5af76 !Important;
+        border: solid 1px #f5af76;
+    }

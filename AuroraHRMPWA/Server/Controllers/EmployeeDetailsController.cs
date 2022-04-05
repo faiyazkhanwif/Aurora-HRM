@@ -29,5 +29,33 @@ namespace AuroraHRMPWA.Server.Controllers
             var result = await _employeeDetailsService.GetUserAsync(userId);
             return Ok(result);
         }
+
+        [HttpGet("getemploymentdetails/{userId}")]
+        public async Task<ActionResult<ServiceResponse<EmploymentDetail>>> GetEmploymentDetails(int userId)
+        {
+            var result = await _employeeDetailsService.GetEmploymentDetailsAsync(userId);
+            return Ok(result);
+        }
+
+        [HttpGet("getbankaccounts/{userId}")]
+        public async Task<ActionResult<ServiceResponse<List<BankAccount>>>> GetBankAccounts(int userId)
+        {
+            var result = await _employeeDetailsService.GetBankAccountsAsync(userId);
+            return Ok(result);
+        }
+
+        [HttpGet("getemployeeexperiences/{userId}")]
+        public async Task<ActionResult<ServiceResponse<List<EmployeeExperience>>>> GetEmployeeExperiences(int userId)
+        {
+            var result = await _employeeDetailsService.GetEmployeeExperiencesAsync(userId);
+            return Ok(result);
+        }
+
+        [HttpGet("getqualifications/{userId}")]
+        public async Task<ActionResult<ServiceResponse<List<Qualification>>>> GetQualifications(int userId)
+        {
+            var result = await _employeeDetailsService.GetQualificationsAsync(userId);
+            return Ok(result);
+        }
     }
 }

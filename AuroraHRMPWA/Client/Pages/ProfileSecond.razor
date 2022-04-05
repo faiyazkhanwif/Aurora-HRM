@@ -1,0 +1,304 @@
+﻿@page "/mycv/2"
+@using System.Security.Claims
+@inject IEmployeeDetailsServiceClient EmployeeDetailsService
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<PageTitle>My CV</PageTitle>
+<h5><strong>My CV</strong></h5>
+<hr />
+
+<div class="animate__animated animate__fadeIn">
+    <div class="container-lg my-2">
+        <div class="row gx-5 gap-3">
+            <div class="col-md">
+                <div class="card shadow-sm h-100">
+                    <p class="pbackground">&nbsp;&nbsp;<i class="fa fa-suitcase" aria-hidden="true"></i>&nbsp;<b>Employment Details</b></p>
+                    @if (employmentDetail != null)
+                    {
+                        <div class="card-body animate__animated animate__fadeIn">
+                            <ul>
+                                <li><small><b>Position:</b> <span class="text-primary">@employmentDetail.Position</span></small></li>
+                                <li><small><b>Department:</b> <span class="text-dark">@employmentDetail.Department</span></small></li>
+                                <li><small><b>Base Salary:</b> <span class="text-dark">RM @employmentDetail.BaseSalary</span></small></li>
+                                <li><small><b>Date of Hiring:</b> <span class="text-dark">@employmentDetail.DateOfHiring.Day/@employmentDetail.DateOfHiring.Month/@employmentDetail.DateOfHiring.Year</span></small></li>
+                                <li><small><b>Notice Period:</b> <span class="text-dark">@employmentDetail.NoticePeriod Months</span></small></li>
+                            </ul>
+                        </div>
+                    }
+                    else
+                    {
+                        <div style="text-align:center;">
+                            <div class="row">
+                                <div class="col"></div>
+                                <div class="col-8">
+                                    <div class="col animate__animated animate__fadeIn">
+
+                                        <div class="animate__animated animate__pulse animate__infinite animate__delay-1s">
+                                            <img src="ahrm.png" alt="Alternate Text" width="80" />
+                                        </div>
+                                        <br />
+                                        <div class="animate__animated animate__fadeIn">
+                                            <p class="text-danger">@message</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col"></div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="card shadow-sm h-100">
+                    <p class="pbackground">&nbsp;&nbsp;<i class="fa fa-university" aria-hidden="true"></i>&nbsp;<b>Bank Accounts</b></p>
+                    @if (bankAccount != null)
+                    {
+                        int i = 1;
+                        foreach (var account in bankAccount)
+                        {
+                            <div class="card-body animate__animated animate__fadeIn">
+                                <p>
+                                    <small>
+                                        <i class="fa fa-dollar" aria-hidden="true"></i>
+                                        <i>Account: @i</i>
+                                    </small>
+                                </p>
+                                <ul>
+                                    <li><small><b>Bank Name:</b> <span class="text-dark">@account.BankName</span></small></li>
+                                    <li><small><b>Account Number:</b> <span class="text-dark">@account.AccountNumber</span></small></li>
+                                    <li><small><b>Account Type:</b> <span class="text-dark">@account.AccountType</span></small></li>
+                                    <li><small><b>Currency:</b> <span class="text-dark">@account.Currency</span></small></li>
+                                </ul>
+                            </div>
+                            i++;
+                        }
+                    }
+                    else
+                    {
+                        <div style="text-align:center;">
+                            <div class="row">
+                                <div class="col"></div>
+                                <div class="col-8">
+                                    <div class="col animate__animated animate__fadeIn">
+
+                                        <div class="animate__animated animate__pulse animate__infinite animate__delay-1s">
+                                            <img src="ahrm.png" alt="Alternate Text" width="80" />
+                                        </div>
+                                        <br />
+                                        <div class="animate__animated animate__fadeIn">
+                                            <p class="text-danger">@messagebank</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col"></div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row gx-5 gap-3">
+            <div class="col-md">
+                <div class="card shadow-sm h-100">
+                    <p class="pbackground">&nbsp;&nbsp;<i class="fa fa-history" aria-hidden="true"></i>&nbsp;<b>Employment History</b></p>
+                    @if (employeeExperiences != null)
+                    {
+                        int i = 1;
+                        foreach (var experience in employeeExperiences)
+                        {
+                            <div class="card-body animate__animated animate__fadeIn">
+                                <p>
+                                    <small>
+                                        <i class="fa fa-user-tie" aria-hidden="true"></i>
+                                        <i>Experience: @i</i>
+                                    </small>
+                                </p>
+                                <ul>
+                                    <li><small><b>Company Name:</b> <span class="text-dark">@experience.CompanyName</span></small></li>
+                                    <li><small><b>Position:</b> <span class="text-dark">@experience.Position</span></small></li>
+                                    <li><small><b>Years Served:</b> <span class="text-dark">@experience.YearsServed</span></small></li>
+                                    <li><small><b>Salary:</b> <span class="text-dark">RM @experience.Salary</span></small></li>
+                                </ul>
+                            </div>
+                            i++;
+                        }
+                    }
+                    else
+                    {
+                        <div style="text-align:center;">
+                            <div class="row">
+                                <div class="col"></div>
+                                <div class="col-8">
+                                    <div class="col animate__animated animate__fadeIn">
+
+                                        <div class="animate__animated animate__pulse animate__infinite animate__delay-1s">
+                                            <img src="ahrm.png" alt="Alternate Text" width="80" />
+                                        </div>
+                                        <br />
+                                        <div class="animate__animated animate__fadeIn">
+                                            <p class="text-danger">@messageexp</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col"></div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="card shadow-sm h-100">
+                    <p class="pbackground">&nbsp;&nbsp;<i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;<b>Qualifications</b></p>
+                    @if (qualifications != null)
+                    {
+                        int i = 1;
+                        foreach (var qualification in qualifications)
+                        {
+                            <div class="card-body animate__animated animate__fadeIn">
+                                <p>
+                                    <small>
+                                        <i class="fa fa-book" aria-hidden="true"></i>
+                                        <i>Qualification: @i</i>
+                                    </small>
+                                </p>
+                                <ul>
+                                    <li><small><b>Institution Name:</b> <span class="text-dark">@qualification.InstitutionName</span></small></li>
+                                    <li><small><b>Qualification Name:</b> <span class="text-dark">@qualification.QualificationName</span></small></li>
+                                    <li><small><b>Major:</b> <span class="text-dark">@qualification.Major</span></small></li>
+                                    <li><small><b>Result:</b> <span class="text-dark">@qualification.Result</span></small></li>
+                                    <li><small><b>Start Date:</b> <span class="text-dark">@qualification.StartDate.Day/@qualification.StartDate.Month/@qualification.StartDate.Year</span></small></li>
+                                    <li><small><b>End Date:</b> <span class="text-dark">@qualification.EndDate.Day/@qualification.EndDate.Month/@qualification.EndDate.Year</span></small></li>
+                                    <li><small><b>Completion Status:</b> <span class="text-dark">@qualification.CompletionStatus</span></small></li>
+                                </ul>
+                            </div>
+                            i++;
+                        }
+                    }
+                    else
+                    {
+                        <div style="text-align:center;">
+                            <div class="row">
+                                <div class="col"></div>
+                                <div class="col-8">
+                                    <div class="col animate__animated animate__fadeIn">
+
+                                        <div class="animate__animated animate__pulse animate__infinite animate__delay-1s">
+                                            <img src="ahrm.png" alt="Alternate Text" width="80" />
+                                        </div>
+                                        <br />
+                                        <div class="animate__animated animate__fadeIn">
+                                            <p class="text-danger">@messageexp</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col"></div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+
+        <!--Pagination-->
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col d-flex justify-content-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-sm">
+                        <li class="page-item">
+                            <a class="page-link" href="mycv" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="mycv">1</a></li>
+                        <li class="page-item active"><a class="page-link" href="mycv/2">2</a></li>
+                        <li class="page-item">
+                            <a class="page-link" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@code {
+    private EmploymentDetail? employmentDetail = null;
+    private List<BankAccount>? bankAccount = null;
+    private List<EmployeeExperience>? employeeExperiences = null;
+    private List<Qualification>? qualifications = null;
+    private string message = string.Empty;
+    private string messagebank = string.Empty;
+    private string messageexp = string.Empty;
+    private string messagequa = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {   //Assign string to show while loading
+        message = "Loading...";
+        messagebank = "Loading...";
+        messageexp = "Loading...";
+        messagequa = "Loading...";
+
+        //Get userId from the claim stored in token
+        var state = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var userstr = state.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        int userId = int.Parse(userstr);
+
+        //Get Employment Details
+        var result = await EmployeeDetailsService.GetEmploymentDetails(userId);
+        if (!result.Success)
+        {
+            message = result.Message;
+        }
+        else
+        {
+            employmentDetail = result.Data;
+        }
+
+        //Get Bank Accounts
+        var resultbank = await EmployeeDetailsService.GetBankAccounts(userId);
+        if (!resultbank.Success)
+        {
+            messagebank = resultbank.Message;
+        }
+        else
+        {
+            bankAccount = resultbank.Data;
+        }
+
+        //Get Employee Experiences
+        var resultexp = await EmployeeDetailsService.GetEmployeeExperiences(userId);
+        if (!resultexp.Success)
+        {
+            messageexp = resultexp.Message;
+        }
+        else
+        {
+            employeeExperiences = resultexp.Data;
+        }
+
+        //Get Employee Experiences
+        var resultqua = await EmployeeDetailsService.GetQualifications(userId);
+        if (!resultqua.Success)
+        {
+            messagequa = resultqua.Message;
+        }
+        else
+        {
+            qualifications = resultqua.Data;
+        }
+    }
+
+}

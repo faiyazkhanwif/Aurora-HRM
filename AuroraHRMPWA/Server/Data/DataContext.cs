@@ -35,6 +35,15 @@
                     Gender = "Female",
                     Relation = Relation.Child,
                     UserId = 31
+                },
+                new FamilyMember
+                {
+                    Id = 4,
+                    Name = "jacky",
+                    Age = 5,
+                    Gender = "Male",
+                    Relation = Relation.Child,
+                    UserId = 29
                 }
                 );
 

@@ -1,0 +1,39 @@
+﻿.pbackground {
+    background-color: #EBEBEB;
+}
+
+.icon {
+    position: absolute;
+    top: 10px;
+    left: auto;
+    right: 10px;
+}
+
+.card {
+    background: rgb(255,239,226);
+    background: radial-gradient(circle, rgba(255,239,226,1) 0%, rgba(255,255,255,1) 180%);
+}
+.pagination > li > a {
+    background-color: white;
+    color: #f5af76;
+}
+
+    .pagination > li > a:focus,
+    .pagination > li > a:hover,
+    .pagination > li > span:focus,
+    .pagination > li > span:hover {
+        color: #5a5a5a;
+        background-color: #eee;
+        border-color: #ddd;
+    }
+
+.pagination > .active > a {
+    color: white;
+    background-color: #f5af76 !Important;
+    border: solid 1px #f5af76 !Important;
+}
+
+    .pagination > .active > a:hover {
+        background-color: #f5af76 !Important;
+        border: solid 1px #f5af76;
+    }
