@@ -1,0 +1,127 @@
+﻿@page "/mycv/3"
+@using System.Security.Claims
+@inject IEmployeeDetailsServiceClient EmployeeDetailsService
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<PageTitle>My CV</PageTitle>
+<h5><strong>My CV</strong></h5>
+<hr />
+
+<div class="animate__animated animate__fadeIn">
+    <div class="container-lg my-2">
+        <div class="row gx-5 gap-3">
+            <div class="col-md">
+                <div class="card shadow-sm h-100">
+                    <p class="pbackground">&nbsp;&nbsp;<i class="fa fa-users" aria-hidden="true"></i>&nbsp;<b>Family Members</b></p>
+                    @if (familyMembers != null)
+                    {
+                        int i = 1;
+                        foreach (var familyMember in familyMembers)
+                        {
+                            <div class="card-body animate__animated animate__fadeIn">
+                                <p>
+                                    <small>
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <i>Family Member: @i</i>
+                                    </small>
+                                </p>
+                                <ul>
+                                    <li><small><b>Name:</b> <span class="text-dark">@familyMember.Name</span></small></li>
+                                    <li><small><b>Age:</b> <span class="text-dark">@familyMember.Age</span></small></li>
+                                    <li><small><b>Gender:</b> <span class="text-dark">@familyMember.Gender</span></small></li>
+                                    <li><small><b>Relation:</b> <span class="text-dark">@familyMember.Relation</span></small></li>
+                                </ul>
+                            </div>
+                            i++;
+                        }
+                    }
+                    else
+                    {
+                        <div style="text-align:center;">
+                            <div class="row">
+                                <div class="col"></div>
+                                <div class="col-8">
+                                    <div class="col animate__animated animate__fadeIn">
+                                        <div class="animate__animated animate__pulse animate__infinite animate__delay-1s">
+                                            <img src="notfound.png" alt="Alternate Text" width="80" />
+                                        </div>
+                                        <br />
+                                        <div class="animate__animated animate__fadeIn">
+                                            <small class="text-dark">@message</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col"></div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-md">
+
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <!--Pagination-->
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col d-flex justify-content-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-sm">
+                        <li class="page-item">
+                            <a class="page-link" href="mycv/2" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="mycv">1</a></li>
+                        <li class="page-item"><a class="page-link" href="mycv/2">2</a></li>
+                        <li class="page-item active"><a class="page-link" href="mycv/3">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@code {
+    private List<FamilyMember>? familyMembers = null;
+    private string message = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {   //Assign string to show while loading
+        message = "Loading...";
+
+        //Get userId from the claim stored in token
+        var state = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var userstr = state.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        int userId = int.Parse(userstr);
+
+        //Get Bank Accounts
+        var resultfamily = await EmployeeDetailsService.GetFamilyMembers(userId);
+        if (!resultfamily.Success)
+        {
+            message = resultfamily.Message;
+        }
+        else
+        {
+            familyMembers = resultfamily.Data;
+        }
+
+    }
+
+}

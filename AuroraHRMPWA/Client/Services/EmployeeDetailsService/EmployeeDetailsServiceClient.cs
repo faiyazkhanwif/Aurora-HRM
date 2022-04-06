@@ -38,5 +38,11 @@
             var result = await _http.GetFromJsonAsync<ServiceResponse<List<Qualification>>>($"api/employeedetails/getqualifications/{userId}");
             return result;
         }
+
+        public async Task<ServiceResponse<List<FamilyMember>>> GetFamilyMembers(int userId)
+        {
+            var result = await _http.GetFromJsonAsync<ServiceResponse<List<FamilyMember>>>($"api/employeedetails/getfamilymembers/{userId}");
+            return result;
+        }
     }
 }

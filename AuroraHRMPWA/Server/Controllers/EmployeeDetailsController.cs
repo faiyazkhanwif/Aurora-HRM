@@ -57,5 +57,12 @@ namespace AuroraHRMPWA.Server.Controllers
             var result = await _employeeDetailsService.GetQualificationsAsync(userId);
             return Ok(result);
         }
+
+        [HttpGet("getfamilymembers/{userId}")]
+        public async Task<ActionResult<ServiceResponse<List<FamilyMember>>>> GetFamilyMembers(int userId)
+        {
+            var result = await _employeeDetailsService.GetFamilyMembersAsync(userId);
+            return Ok(result);
+        }
     }
 }

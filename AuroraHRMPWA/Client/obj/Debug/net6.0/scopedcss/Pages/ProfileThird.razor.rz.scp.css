@@ -1,45 +1,45 @@
-.pbackground[b-qejpcfnf5b] {
+.pbackground[b-xhe1wnp9eo] {
     background-color: #EBEBEB;
 }
 
-.icon[b-qejpcfnf5b] {
+.icon[b-xhe1wnp9eo] {
     position: absolute;
     top: 10px;
     left: auto;
     right: 10px;
 }
 
-.card[b-qejpcfnf5b] {
+.card[b-xhe1wnp9eo] {
     background: rgb(255,239,226);
     background: radial-gradient(circle, rgba(255,239,226,1) 0%, rgba(255,255,255,1) 180%);
 }
 
-    .card:hover[b-qejpcfnf5b] {
+    .card:hover[b-xhe1wnp9eo] {
         transform: scale(1.03);
         transition: all 0.3s;
     }
 
-.pagination > li > a[b-qejpcfnf5b] {
+.pagination > li > a[b-xhe1wnp9eo] {
     background-color: white;
     color: #f5af76;
 }
 
-    .pagination > li > a:focus[b-qejpcfnf5b],
-    .pagination > li > a:hover[b-qejpcfnf5b],
-    .pagination > li > span:focus[b-qejpcfnf5b],
-    .pagination > li > span:hover[b-qejpcfnf5b] {
+    .pagination > li > a:focus[b-xhe1wnp9eo],
+    .pagination > li > a:hover[b-xhe1wnp9eo],
+    .pagination > li > span:focus[b-xhe1wnp9eo],
+    .pagination > li > span:hover[b-xhe1wnp9eo] {
         color: #5a5a5a;
         background-color: #eee;
         border-color: #ddd;
     }
 
-.pagination > .active > a[b-qejpcfnf5b] {
+.pagination > .active > a[b-xhe1wnp9eo] {
     color: white;
     background-color: #f5af76 !Important;
     border: solid 1px #f5af76 !Important;
 }
 
-    .pagination > .active > a:hover[b-qejpcfnf5b] {
+    .pagination > .active > a:hover[b-xhe1wnp9eo] {
         background-color: #f5af76 !Important;
         border: solid 1px #f5af76;
     }

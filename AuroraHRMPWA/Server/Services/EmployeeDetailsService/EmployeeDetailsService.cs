@@ -67,9 +67,21 @@ namespace AuroraHRMPWA.Server.Services.EmployeeDetailsService
             return response;
         }
 
-        public Task<ServiceResponse<List<FamilyMember>>> GetFamilyMembersAsync(int userId)
+        public async Task<ServiceResponse<List<FamilyMember>>> GetFamilyMembersAsync(int userId)
         {
-            throw new NotImplementedException();
+            var response = new ServiceResponse<List<FamilyMember>>
+            {
+                Data = await _context.FamilyMembers
+            .Where(p => p.UserId == userId)
+            .ToListAsync()
+            };
+            if (response.Data.Count == 0)
+            {
+                response.Success = false;
+                response.Message = "Could not find any family members for the user.";
+            }
+
+            return response;
         }
 
         public async Task<ServiceResponse<List<Qualification>>> GetQualificationsAsync(int userId)

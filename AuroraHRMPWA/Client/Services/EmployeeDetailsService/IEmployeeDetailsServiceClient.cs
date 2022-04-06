@@ -7,5 +7,6 @@
         Task<ServiceResponse<List<BankAccount>>> GetBankAccounts(int userId);
         Task<ServiceResponse<List<EmployeeExperience>>> GetEmployeeExperiences(int userId);
         Task<ServiceResponse<List<Qualification>>> GetQualifications(int userId);
+        Task<ServiceResponse<List<FamilyMember>>> GetFamilyMembers(int userId);
     }
 }
