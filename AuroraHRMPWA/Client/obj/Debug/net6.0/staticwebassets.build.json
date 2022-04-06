@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "npkZnmZ9kUIktBBHGGcxMPDX+c9ZHi+dxrN+2s0dNZ8=",
+  "Hash": "RFgNfzq5UP72QyRO84FjgqTeAgKV15fOURTOiTmAg+4=",
   "Source": "AuroraHRMPWA.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -8175,6 +8175,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\manifest.json"
+    },
+    {
+      "Identity": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\wwwroot\\notfound.png",
+      "SourceId": "AuroraHRMPWA.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "notfound.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\notfound.png"
     }
   ]
 }

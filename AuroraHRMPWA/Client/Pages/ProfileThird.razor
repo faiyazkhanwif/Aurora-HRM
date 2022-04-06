@@ -111,7 +111,7 @@
         var userstr = state.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
         int userId = int.Parse(userstr);
 
-        //Get Bank Accounts
+        //Get 
         var resultfamily = await EmployeeDetailsService.GetFamilyMembers(userId);
         if (!resultfamily.Success)
         {
