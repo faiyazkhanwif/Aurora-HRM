@@ -38,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvb3Rlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Coding Files/.NET/AuroraHRMPWA/AuroraHRMPWA/Client/Shared/ForgotPasswordLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvcmdvdFBhc3N3b3JkTGF5b3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Coding Files/.NET/AuroraHRMPWA/AuroraHRMPWA/Client/Shared/LoginLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luTGF5b3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -57,6 +61,10 @@ build_metadata.AdditionalFiles.CssScope = b-b0xp573z4b
 [E:/Coding Files/.NET/AuroraHRMPWA/AuroraHRMPWA/Client/Pages/Camera.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FtZXJhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-evzoctksx6
+
+[E:/Coding Files/.NET/AuroraHRMPWA/AuroraHRMPWA/Client/Pages/ForgotPasswordPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9yZ290UGFzc3dvcmRQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-h3dicfxrfl
 
 [E:/Coding Files/.NET/AuroraHRMPWA/AuroraHRMPWA/Client/Pages/HRuserEmployeePage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJ1c2VyRW1wbG95ZWVQYWdlLnJhem9y

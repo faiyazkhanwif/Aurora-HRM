@@ -32,6 +32,57 @@ button[b-evzoctksx6] {
         transform: scale(1.1);
         transition: all 0.3s;
     }
+/* /Pages/ForgotPasswordPage.razor.rz.scp.css */
+/*
+#customanimate {
+    transform: translateX(0px);
+    -webkit-animation: move 1s;
+    animation: move 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes move {
+    from {
+        -webkit-transform: translateY(0px);
+    }
+
+    to {
+        -webkit-transform: translateY(-210px);
+    }
+}
+
+@keyframes move {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-210px);
+    }
+}
+*/
+.card[b-h3dicfxrfl] {
+    border-radius: 6px;
+}
+
+button[b-h3dicfxrfl] {
+    background-color: rgba(255, 153, 51, 0.8);
+    border: none;
+}
+    button:hover[b-h3dicfxrfl] {
+        background-color: rgba(253, 127, 44, 0.8);
+        transform: scale(1.1);
+        transition: all 0.3s;
+    }
+
+    button:active[b-h3dicfxrfl] {
+        background-color: rgba(255, 153, 51, 0.8);
+    }
+
+    button:focus[b-h3dicfxrfl] {
+        background-color: rgba(253, 127, 44, 0.8);
+    }
 /* /Pages/HRuserEmployeePage.razor.rz.scp.css */
 #matrix[b-8g42dhj59n] {
     margin: 0 auto;

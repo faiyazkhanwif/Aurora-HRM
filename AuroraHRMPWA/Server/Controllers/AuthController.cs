@@ -60,5 +60,16 @@ namespace AuroraHRMPWA.Server.Controllers
             }
             return Ok(response);
         }
+
+        [HttpPost("forgotpassword")]
+        public async Task<ActionResult<string>> ForgotPassword(UserForgotPassword request)
+        {
+            var response = await _authService.ForgotPassword(request.Email);
+            if (!response.Success)
+            {
+                return BadRequest(response);
+            }
+            return Ok(response);
+        }
     }
 }

@@ -10,6 +10,12 @@ namespace AuroraHRMPWA.Client.Services.AuthService
             _http = http;
         }
 
+        public async Task<ServiceResponse<string>> ForgotPassword(UserForgotPassword request)
+        {
+            var result = await _http.PostAsJsonAsync("api/auth/forgotpassword", request);
+            return await result.Content.ReadFromJsonAsync<ServiceResponse<string>>();
+        }
+
         public async Task<ServiceResponse<string>> Login(UserLogin request)
         {
             var result = await _http.PostAsJsonAsync("api/auth/login", request);

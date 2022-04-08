@@ -846,3 +846,4 @@ E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\obj\Debug\net6.0\scopedcss
 E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\obj\Debug\net6.0\scopedcss\Pages\Profile.razor.rz.scp.css
 E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\obj\Debug\net6.0\scopedcss\Pages\ProfileSecond.razor.rz.scp.css
 E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\obj\Debug\net6.0\scopedcss\Pages\ProfileThird.razor.rz.scp.css
+E:\Coding Files\.NET\AuroraHRMPWA\AuroraHRMPWA\Client\obj\Debug\net6.0\scopedcss\Pages\ForgotPasswordPage.razor.rz.scp.css

@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -10,11 +11,13 @@ namespace AuroraHRMPWA.Server.Services.AuthService
     {
         private readonly DataContext _context;
         private readonly IConfiguration _configuration;
+        private readonly IHttpContextAccessor _httpcontext;
 
-        public AuthService(DataContext context, IConfiguration configuration)
+        public AuthService(DataContext context, IConfiguration configuration, IHttpContextAccessor httpcontext)
         {
             _context = context;
             _configuration = configuration;
+            _httpcontext = httpcontext;
         }
 
         public async Task<ServiceResponse<string>> Login(string email, string password)
@@ -115,18 +118,55 @@ namespace AuroraHRMPWA.Server.Services.AuthService
 
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8
                 .GetBytes(_configuration.GetSection("AppSettings:Token").Value));
-            
-            var creds = new SigningCredentials(key,SecurityAlgorithms.HmacSha512Signature);
+
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
 
             var token = new JwtSecurityToken(
                 claims: claims,
                 expires: DateTime.Now.AddDays(1),
                 signingCredentials: creds);
 
-            var jwt = new  JwtSecurityTokenHandler().WriteToken(token);
+            var jwt = new JwtSecurityTokenHandler().WriteToken(token);
 
             return jwt;
         }
 
+        public string BaseUrl()
+        {
+            var request = _httpcontext.HttpContext.Request;
+
+            // Creating base URL.
+            string baseURL = $"{request.Scheme}://{request.Host}{request.PathBase}";
+            return baseURL;
+        }
+
+        public async Task<ServiceResponse<string>> ForgotPassword(string email)
+        {
+            var response = new ServiceResponse<string>();
+            //Fetching user from database
+            var user = await _context.Users.FirstOrDefaultAsync(
+                x => x.Email.ToLower().Equals(email.ToLower()));
+
+            if (user == null)
+            {
+                response.Success = false;
+                response.Message = "No user was found.";
+            }
+            else
+            {   //Generating token
+                var token = CreateToken(user);
+                //Getting rid of special characters
+                var encodedToken = System.Text.Encoding.UTF8.GetBytes(token);
+                var validToken = WebEncoders.Base64UrlEncode(encodedToken);
+                //Generating Base URL
+                string baseURL = BaseUrl();
+                //Creating URL for resetting password
+                string resetpassURL = $"{baseURL}/ResetPassword?email={email}&token={validToken}";
+                response.Data = resetpassURL;
+                response.Success = true;
+                response.Message = "A password reset link has been sent to your email.";
+            }
+            return response;
+        }
     }
 }
