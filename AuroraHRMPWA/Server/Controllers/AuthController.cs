@@ -71,5 +71,28 @@ namespace AuroraHRMPWA.Server.Controllers
             }
             return Ok(response);
         }
+
+        [HttpPost("resetpassword")]
+        public async Task<ActionResult<string>> ResetPassword(UserResetPassword request)
+        {
+            var response = await _authService.ResetPassword(request.Email, request.Token, request.Password);
+            if (!response.Success)
+            {
+                return BadRequest(response);
+            }
+            return Ok(response);
+        }
+
+        [HttpPost("sendmail")]
+        public async Task<ActionResult<string>> SendMail(ForgotPasswordSendMail request)
+        {
+            var response = await _authService.SendMail(request.Email, request.MailBody);
+            if (!response.Success)
+            {
+                return BadRequest(response);
+            }
+            return Ok(response);
+        }
+
     }
 }

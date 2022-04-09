@@ -6,5 +6,7 @@
         Task<bool> UserExists(string email);
         Task<ServiceResponse<string>> Login(string email, string password);
         Task<ServiceResponse<string>> ForgotPassword(string email);
+        Task<ServiceResponse<string>> ResetPassword(string email, string token, string password);
+        Task<ServiceResponse<bool>> SendMail(string email, string mailbody);
     }
 }

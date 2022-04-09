@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net.Mail;
 using System.Security.Claims;
 using System.Security.Cryptography;
 
@@ -162,9 +163,108 @@ namespace AuroraHRMPWA.Server.Services.AuthService
                 string baseURL = BaseUrl();
                 //Creating URL for resetting password
                 string resetpassURL = $"{baseURL}/ResetPassword?email={email}&token={validToken}";
-                response.Data = resetpassURL;
-                response.Success = true;
-                response.Message = "A password reset link has been sent to your email.";
+
+                var checkTokenExistence = await _context.TokenStorages.FirstOrDefaultAsync(
+                    x => x.Email.ToLower().Equals(email.ToLower()));
+                if (checkTokenExistence == null)
+                {
+                    _context.TokenStorages.Add(new TokenStorage
+                    {
+                        Email = email,
+                        Token = validToken
+                    });
+                    await _context.SaveChangesAsync();
+                    response.Data = resetpassURL;
+                    response.Success = true;
+                    response.Message = "A reset link has been sent to your email.";
+                }
+                else
+                {
+                    response.Success = false;
+                    response.Message = "A link has already been sent to your email.";
+                }
+            }
+            return response;
+        }
+
+        public async Task<ServiceResponse<string>> ResetPassword(string email, string token, string password)
+        {
+            var response = new ServiceResponse<string>();
+            var tokenExistence = await _context.TokenStorages.FirstOrDefaultAsync(
+                x => x.Email.ToLower().Equals(email.ToLower()));
+            if (tokenExistence == null)
+            {
+                response.Success = false;
+                response.Message = "Invalid reset link.";
+            }
+            else
+            {
+                if (tokenExistence.Token.Equals(token))
+                {
+                    //reset password
+
+                    //Creating password hash
+                    CreatePasswordHash(password, out byte[] passwordHash, out byte[] passwordSalt);
+
+                    //change password
+                    ChangePassword(email, passwordHash, passwordSalt);
+
+                    //Delete token from storage
+                    _context.TokenStorages.Remove(tokenExistence);
+                    _context.SaveChangesAsync();
+
+                    response.Success = true;
+                    response.Message = "Password has been reset successfully.";
+                }
+                else
+                {
+                    response.Success = false;
+                    response.Message = "Invalid reset link.";
+                }
+            }
+            return response;
+        }
+
+        public async void ChangePassword(string email, byte[] passwordHash, byte[] passwordSalt)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(
+                x => x.Email.ToLower().Equals(email.ToLower()));
+            user.PasswordHash = passwordHash;
+            user.PasswordSalt = passwordSalt;
+            _context.Users.Update(user);
+            _context.SaveChangesAsync();
+        }
+
+        public async Task<ServiceResponse<bool>> SendMail(string email, string mailbody)
+        {
+            var response = new ServiceResponse<bool>();
+            try
+            {
+                using (MailMessage mailMessage = new MailMessage())
+                {
+                    mailMessage.From = new MailAddress("");
+                    mailMessage.To.Add(email);
+                    mailMessage.Subject = "Reset your password | Aurora HRM";
+                    mailMessage.Body =
+                    $"<h1>You have requested to reset your password.</h1> <br> <p>Click the link below:</p> <small>{mailbody}</small>";
+                    mailMessage.IsBodyHtml = true;
+
+                    using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                    {
+                        smtp.Credentials = new System.Net.NetworkCredential("", "");
+                        smtp.EnableSsl = true;
+                        smtp.Send(mailMessage);
+                        response.Success = true;
+                        response.Data = true;
+                        response.Message = "Mail sent successfully";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Success = false;
+                response.Data = false;
+                response.Message = ex.Message;
             }
             return response;
         }

@@ -55,5 +55,6 @@
         public DbSet<Qualification> Qualifications { get; set; }
         public DbSet<BankAccount> BankAccounts { get; set; }
         public DbSet<FamilyMember> FamilyMembers { get; set; }
+        public DbSet<TokenStorage> TokenStorages { get; set; }
     }
 }
