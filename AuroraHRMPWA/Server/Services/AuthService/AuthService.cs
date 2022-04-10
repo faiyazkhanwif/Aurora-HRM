@@ -207,11 +207,11 @@ namespace AuroraHRMPWA.Server.Services.AuthService
                     CreatePasswordHash(password, out byte[] passwordHash, out byte[] passwordSalt);
 
                     //change password
-                    ChangePassword(email, passwordHash, passwordSalt);
+                    await ChangePassword(email, passwordHash, passwordSalt);
 
                     //Delete token from storage
                     _context.TokenStorages.Remove(tokenExistence);
-                    _context.SaveChangesAsync();
+                    await _context.SaveChangesAsync();
 
                     response.Success = true;
                     response.Message = "Password has been reset successfully.";
@@ -225,14 +225,14 @@ namespace AuroraHRMPWA.Server.Services.AuthService
             return response;
         }
 
-        public async void ChangePassword(string email, byte[] passwordHash, byte[] passwordSalt)
+        public async Task ChangePassword(string email, byte[] passwordHash, byte[] passwordSalt)
         {
             var user = await _context.Users.FirstOrDefaultAsync(
                 x => x.Email.ToLower().Equals(email.ToLower()));
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
             _context.Users.Update(user);
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
         }
 
         public async Task<ServiceResponse<bool>> SendMail(string email, string mailbody)
