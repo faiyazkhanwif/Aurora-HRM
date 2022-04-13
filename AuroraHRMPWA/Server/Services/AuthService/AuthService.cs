@@ -242,7 +242,7 @@ namespace AuroraHRMPWA.Server.Services.AuthService
             {
                 using (MailMessage mailMessage = new MailMessage())
                 {
-                    mailMessage.From = new MailAddress("");
+                    mailMessage.From = new MailAddress(""); // Have to add email inside the quotes
                     mailMessage.To.Add(email);
                     mailMessage.Subject = "Reset your password | Aurora HRM";
                     mailMessage.Body =
@@ -251,7 +251,7 @@ namespace AuroraHRMPWA.Server.Services.AuthService
 
                     using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                     {
-                        smtp.Credentials = new System.Net.NetworkCredential("", "");
+                        smtp.Credentials = new System.Net.NetworkCredential("", ""); // Have to add email and password inside the quotes
                         smtp.EnableSsl = true;
                         smtp.Send(mailMessage);
                         response.Success = true;
