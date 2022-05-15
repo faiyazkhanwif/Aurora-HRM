@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1LKT43TLoBbXJ4Mbob3DfsfCZqLTcxuK4uOZdLNAJcMxLvzAc+Z7sMo6HGxBYMLl1IRBOYe8VdShnvuvCeRc+w==",
+  "dgSpecHash": "UO8ChQJuBt/ZeMLiJ+mASH4G2bZIBIlmLC67fit8ZCgtdsKs2cKpAfi+0AyRx5oWpiQFvWvoP82ruN08a3rw4g==",
   "success": true,
   "projectFilePath": "E:\\Coding Files\\.NET\\AuroraHRMPWA\\AuroraHRMPWA\\Client\\AuroraHRMPWA.Client.csproj",
   "expectedPackageFiles": [
@@ -36,7 +36,7 @@
     "C:\\Users\\faiya\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\faiya\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\faiya\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
-    "C:\\Users\\faiya\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.3\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.3.nupkg.sha512"
+    "C:\\Users\\faiya\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.4\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.4.nupkg.sha512"
   ],
   "logs": []
 }
